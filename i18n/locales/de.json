@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "about": "Über uns",
+    "map": "Karte"
+  },
+  "hero": {
+    "subtitle": "Ein Radiosender aus dem Zürcher Seefeld"
+  },
+  "home": {
+    "intro": "Radio Riesbach war ein freies Radio aus dem Zürcher Seefeld, das in den 1980er Jahren auf Sendung ging. Diese Ausstellung lädt ein, die Geschichte des Senders durch Originalaufnahmen, Fotografien und Zeitzeugenberichte zu erkunden.",
+    "audioHeading": "Originalaufnahmen",
+    "imagesHeading": "Bilder"
+  },
+  "audio": {
+    "play": "Abspielen",
+    "pause": "Pause",
+    "stop": "Stop",
+    "original": "Originalaufnahme"
+  },
+  "about": {
+    "heading": "Über Radio Riesbach",
+    "body": "Radio Riesbach war ein Freies Radio aus dem Quartier Seefeld in Zürich. Es sendete von [Jahr] bis [Jahr] und war Teil der aufkommenden Freiradiobewegung in der Schweiz. Der Sender war bekannt für seine lokalen Berichte, Musiksendungen und politischen Diskussionen."
+  },
+  "map": {
+    "heading": "Karte des Seefelds",
+    "intro": "Klicken Sie auf einen Punkt, um den dazugehörigen Audioclip zu hören.",
+    "close": "Schliessen"
+  },
+  "footer": {
+    "tagline": "Freies Radio · Zürich Seefeld"
+  }
+}

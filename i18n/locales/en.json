@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "about": "About",
+    "map": "Map"
+  },
+  "hero": {
+    "subtitle": "A radio station from Zurich's Seefeld district"
+  },
+  "home": {
+    "intro": "Radio Riesbach was a free radio station from Zurich's Seefeld district, which went on air in the 1980s. This exhibition invites you to explore the station's history through original recordings, photographs and eyewitness accounts.",
+    "audioHeading": "Original Recordings",
+    "imagesHeading": "Images"
+  },
+  "audio": {
+    "play": "Play",
+    "pause": "Pause",
+    "stop": "Stop",
+    "original": "Original recording"
+  },
+  "about": {
+    "heading": "About Radio Riesbach",
+    "body": "Radio Riesbach was a free radio station from the Seefeld district in Zurich. It broadcast from [year] to [year] and was part of the emerging free radio movement in Switzerland. The station was known for its local reports, music programmes and political discussions."
+  },
+  "map": {
+    "heading": "Map of Seefeld",
+    "intro": "Click on a dot to listen to the associated audio clip.",
+    "close": "Close"
+  },
+  "footer": {
+    "tagline": "Free Radio · Zurich Seefeld"
+  }
+}
