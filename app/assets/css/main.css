@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-black-coffee: #1B1B1B;
+  --color-warm-white: #FAF9F6;
+  --color-riesbach-rot: #FE3A3A;
+
+  --font-courier: "Courier Prime", "Courier New", monospace;
+}
+
+html {
+  background-color: #FAF9F6;
+  color: #1B1B1B;
+  font-family: "Courier Prime", "Courier New", monospace;
+}
+
+a {
+  color: #FE3A3A;
+}
+
+a:hover {
+  text-decoration: underline;
+}
