@@ -10,66 +10,130 @@ export interface AudioClip {
 export const audioClips: AudioClip[] = [
   {
     id: '01',
-    title: 'Sendebeginn 1984',
-    description: 'Die erste Sendung von Radio Riesbach geht auf Sendung.',
-    image: '/images/clips/clip-01.jpg',
-    src: '/audio/clip-01.mp3',
+    title: 'Griechischer Markt',
+    description: '',
+    image: '',
+    src: '/audio/RR_Griechischer Markt_kurz.mp3',
     originalUrl: '#'
   },
   {
     id: '02',
-    title: 'Morgenmagazin',
-    description: 'Nachrichten und Musik zum Start in den Tag.',
-    image: '/images/clips/clip-02.jpg',
-    src: '/audio/clip-02.mp3',
+    title: 'Interview 1. April 1984',
+    description: '',
+    image: '',
+    src: '/audio/RR_Interview 1.4.1984_kurz.mp3',
     originalUrl: '#'
   },
   {
     id: '03',
-    title: 'Interview mit dem Gründer',
-    description: 'Hans Meier erzählt, wie Radio Riesbach entstand.',
-    image: '/images/clips/clip-03.jpg',
-    src: '/audio/clip-03.mp3',
+    title: 'Feldeggstrasse',
+    description: '',
+    image: '',
+    src: '/audio/RR_Feldeggstrasse_kurz.mp3',
     originalUrl: '#'
   },
   {
     id: '04',
-    title: 'Musik aus dem Seefeld',
-    description: 'Lokale Künstler live im Studio.',
-    image: '/images/clips/clip-04.jpg',
-    src: '/audio/clip-04.mp3',
+    title: 'Finissage – Liz',
+    description: '',
+    image: '',
+    src: '/audio/RR_Finissage_Liz_kurz.mp3',
     originalUrl: '#'
   },
   {
     id: '05',
-    title: 'Abendprogramm 1986',
-    description: 'Kulturberichte und Stadtgespräche.',
-    image: '/images/clips/clip-05.jpg',
-    src: '/audio/clip-05.mp3',
+    title: 'Häuserabbruch',
+    description: '',
+    image: '',
+    src: '/audio/RR_Haeuserabbruch_kurz.mp3',
     originalUrl: '#'
   },
   {
     id: '06',
-    title: 'Wetterbericht Seefeld',
-    description: 'Der tägliche Wetterbericht für das Quartier.',
-    image: '/images/clips/clip-06.jpg',
-    src: '/audio/clip-06.mp3',
+    title: 'Mittelstrasse',
+    description: '',
+    image: '',
+    src: '/audio/RR_Mittelstrasse_kurz.mp3',
     originalUrl: '#'
   },
   {
     id: '07',
-    title: 'Jingle Radio Riesbach',
-    description: 'Das Original-Jingle aus den 80ern.',
-    image: '/images/clips/clip-07.jpg',
-    src: '/audio/clip-07.mp3',
+    title: 'Abfallsackgebühren',
+    description: '',
+    image: '',
+    src: '/audio/RR_Abfallsackgebühren_kurz.mp3',
     originalUrl: '#'
   },
   {
     id: '08',
-    title: 'Politische Debatte',
-    description: 'Diskussion über Stadtentwicklung im Seefeld.',
-    image: '/images/clips/clip-08.jpg',
-    src: '/audio/clip-08.mp3',
+    title: '50. Sendung – Quartierjournal',
+    description: '',
+    image: '',
+    src: '/audio/RR_50. Sendung_Quartierjournal.mp3',
+    originalUrl: '#'
+  },
+  {
+    id: '09',
+    title: 'Schulwegsicherung',
+    description: '',
+    image: '',
+    src: '/audio/RR_Schulwegsicherung_kurz.mp3',
+    originalUrl: '#'
+  },
+  {
+    id: '10',
+    title: 'Arbenzstrasse',
+    description: '',
+    image: '',
+    src: '/audio/RR_Arbenzstrasse_kurz.mp3',
+    originalUrl: '#'
+  },
+  {
+    id: '11',
+    title: 'Drogenauffangstation',
+    description: '',
+    image: '',
+    src: '/audio/RR_Drogenauffangstation_kurz.mp3',
+    originalUrl: '#'
+  },
+  {
+    id: '12',
+    title: 'Signet',
+    description: '',
+    image: '',
+    src: '/audio/RR_Signet.mp3',
+    originalUrl: '#'
+  },
+  {
+    id: '13',
+    title: 'Finissage – Peter',
+    description: '',
+    image: '',
+    src: '/audio/RR_Finissage_Peter_kurz.mp3',
+    originalUrl: '#'
+  },
+  {
+    id: '14',
+    title: 'Heimatstrasse',
+    description: '',
+    image: '',
+    src: '/audio/RR_Heimatstrasse_kurz.mp3',
+    originalUrl: '#'
+  },
+  {
+    id: '15',
+    title: 'Lila Bus',
+    description: '',
+    image: '',
+    src: '/audio/RR_LilaBus_kurz.mp3',
+    originalUrl: '#'
+  },
+  {
+    id: '16',
+    title: 'Riesbachtunnel',
+    description: '',
+    image: '',
+    src: '/audio/RR_Riesbachtunnel_kurz.mp3',
     originalUrl: '#'
   }
 ]
