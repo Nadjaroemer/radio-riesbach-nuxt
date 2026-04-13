@@ -22,16 +22,17 @@
           {{ $t('nav.map') }}
         </NuxtLink>
 
-        <div class="flex items-center gap-2 text-sm tracking-widest">
-          <button
-            v-for="loc in availableLocales"
-            :key="loc.code"
-            class="uppercase transition-colors"
-            :class="locale === loc.code ? 'text-riesbach-rot' : 'text-warm-white hover:text-riesbach-rot'"
-            @click="setLocale(loc.code)"
-          >
-            {{ loc.code }}
-          </button>
+        <div class="flex items-center text-sm tracking-widest">
+          <template v-for="(loc, i) in locales" :key="loc.code">
+            <button
+              class="transition-colors"
+              :class="locale === loc.code ? 'text-riesbach-rot' : 'text-warm-white hover:text-riesbach-rot'"
+              @click="setLocale(loc.code as 'de' | 'en')"
+            >
+              {{ loc.name }}
+            </button>
+            <span v-if="i < locales.length - 1" class="mx-2 text-warm-white/30">/</span>
+          </template>
         </div>
       </div>
     </div>
@@ -39,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-const { locale, availableLocales, setLocale } = useI18n()
+const { locale, locales, setLocale } = useI18n()
 const localePath = useLocalePath()
 
 const visible = ref(false)
