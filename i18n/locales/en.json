@@ -27,6 +27,9 @@
     "close": "Close"
   },
   "footer": {
-    "tagline": "Free Radio · Zurich Seefeld"
+    "years": "1984–1991",
+    "project": "A project by Lucia Herrmann",
+    "archive": "Archive material: Sozialarchiv Zürich",
+    "copyright": "© 2026 Radio Riesbach"
   }
 }
