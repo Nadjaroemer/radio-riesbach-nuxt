@@ -16,7 +16,20 @@
       <div>
         <span class="text-xs text-black-coffee/40 tracking-widest uppercase">{{ clip.id }}</span>
         <h3 class="font-bold text-base mt-0.5 leading-snug">{{ clip.title }}</h3>
-        <p class="text-sm text-black-coffee/70 mt-1 leading-relaxed">{{ clip.description }}</p>
+        <div v-if="clip.description" class="mt-1">
+          <p
+            class="text-sm text-black-coffee/70 leading-relaxed overflow-hidden transition-all duration-300"
+            :class="expanded ? '' : 'line-clamp-3'"
+          >
+            {{ clip.description }}
+          </p>
+          <button
+            class="text-xs text-riesbach-rot mt-1 hover:underline"
+            @click="expanded = !expanded"
+          >
+            {{ expanded ? '▲ weniger' : '▼ mehr' }}
+          </button>
+        </div>
       </div>
 
       <!-- Controls -->
@@ -71,6 +84,7 @@ const props = defineProps<{ clip: AudioClip }>()
 
 const audioEl = ref<HTMLAudioElement | null>(null)
 const isPlaying = ref(false)
+const expanded = ref(false)
 const progress = ref(0)
 const currentTime = ref(0)
 
