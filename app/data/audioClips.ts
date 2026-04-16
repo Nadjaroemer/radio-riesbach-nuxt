@@ -11,10 +11,12 @@ export const audioClips: AudioClip[] = [
   {
     id: "01",
     title: "Griechischer Markt",
-    description: "",
+    description:
+      "Interview mit einer griechischen Anwohnerin, die sich für den kulturellen Austausch im Quartier engagiert. Sie berichtet auch über Schwierigkeiten von nicht-deutschsprechenden Eltern in der Schweiz.",
     image: "",
     src: "/audio/RR_Griechischer Markt_kurz.mp3",
-    originalUrl: "#",
+    originalUrl:
+      "https://www.bild-video-ton.ch/bestand/objekt/Sozarch_F_1030-012A",
   },
   {
     id: "02",
@@ -27,10 +29,12 @@ export const audioClips: AudioClip[] = [
   {
     id: "03",
     title: "Feldeggstrasse",
-    description: "",
+    description:
+      "Auf einem Spaziergang durch die Feldeggstrasse erzählt Liz Mennel, welche Arten von Läden und Geschäften es dort gibt. Dann besucht sie den Städtischen Kindergarten und lässt die Kinder dort zu Wort kommen. Schliesslich kommt sie an zwei Bauruinen vorbei. Sie erklärt, warum die Häuser so verfallen sind und wie es damit weitergehen könnte. ",
     image: "",
     src: "/audio/RR_Feldeggstrasse_kurz.mp3",
-    originalUrl: "#",
+    originalUrl:
+      "https://www.bild-video-ton.ch/bestand/objekt/Sozarch_F_1030-136B",
   },
   {
     id: "04",
@@ -42,11 +46,13 @@ export const audioClips: AudioClip[] = [
   },
   {
     id: "05",
-    title: "Häuserabbruch",
-    description: "",
+    title: "Häuserabbruch Höschgasse",
+    description:
+      "Die Liegenschaften an der Höschgasse 72, 74, 76 und 78 sollen abgebrochen werden. Bewohner:innen erzählen, wie es ist, dort zu wohnen, und warum sie hoffen, dass die Häuser bewahrt und renoviert werden können.",
     image: "",
     src: "/audio/RR_Haeuserabbruch_kurz.mp3",
-    originalUrl: "#",
+    originalUrl:
+      "https://www.bild-video-ton.ch/bestand/objekt/Sozarch_F_1030-021A",
   },
   {
     id: "06",
@@ -59,7 +65,8 @@ export const audioClips: AudioClip[] = [
   {
     id: "07",
     title: "Abfallsackgebühren",
-    description: "",
+    description:
+      "Im Quartier soll man neu für Abfallsäcke bezahlen müssen. Das neue Entsorgungskonzept des Kantons wird vorgestellt und einzelne Anwohner kommen zu Wort. Die Meinungen sind geteilt. ",
     image: "",
     src: "/audio/RR_Abfallsackgebühren_kurz.mp3",
     originalUrl: "#",
@@ -75,7 +82,8 @@ export const audioClips: AudioClip[] = [
   {
     id: "09",
     title: "Schulwegsicherung",
-    description: "",
+    description:
+      "Zwei Mütter aus dem Quartier berichten von den Schwierigkeiten und Gefahren, mit denen sie und ihre Kinder auf dem Schulweg konfrontiert sind. Anschliessend sprechen zwei Elternvertreter über den Verkehr im Quartier und Möglichkeiten, die Schulwege sicherer zu machen.",
     image: "",
     src: "/audio/RR_Schulwegsicherung_kurz.mp3",
     originalUrl: "#",
@@ -91,7 +99,8 @@ export const audioClips: AudioClip[] = [
   {
     id: "11",
     title: "Drogenauffangstation",
-    description: "",
+    description:
+      "Ein Sozialarbeiter schildert den Ablauf in der Notschlafstelle. Hier können Jugendliche und junge Erwachsene mit Drogenproblemen die Nacht verbringen, Unterstützung erhalten und frühstücken.",
     image: "",
     src: "/audio/RR_Drogenauffangstation_kurz.mp3",
     originalUrl: "#",
@@ -115,7 +124,8 @@ export const audioClips: AudioClip[] = [
   {
     id: "14",
     title: "Heimatstrasse",
-    description: "",
+    description:
+      "Liz Mennel erzählt die Geschichte der Heimatstrasse und der Eigenstrasse: Wie das Quartier Gaslampen bekam und ein eigenes Gaswerk. Und wann und warum die Dufourstrasse gebaut wurde. ",
     image: "",
     src: "/audio/RR_Heimatstrasse_kurz.mp3",
     originalUrl: "#",
@@ -123,16 +133,18 @@ export const audioClips: AudioClip[] = [
   {
     id: "15",
     title: "Lila Bus",
-    description: "",
+    description:
+      "Die Regisseurin Josy Meier hat einen Film über die Drogenprostitution und den Freierverkehr im Seefeld gedreht. Sie spricht über den «Lila Bus» und warum es ihn braucht. Der umgebaute Bus steht im Quartier, damit sich prostituierende Frauen einen Ort haben, an dem sie sich aufwärmen, zurückziehen und Unterstützung holen können. Film «Der Kunde ist König» (1992).",
     image: "",
     src: "/audio/RR_LilaBus_kurz.mp3",
-    originalUrl: "#",
+    originalUrl:
+      "https://www.bild-video-ton.ch/bestand/objekt/Sozarch_F_1030-140A",
   },
   {
     id: "16",
     title: "Riesbachtunnel",
     description:
-      "Nach Aktualitäten im Quartier Riesbach im regulären Format «Quartierjournal» begleitet das «Radio Riesbach» in Hauptbeitrag die Sanierungsarbeiten im Riesbachtunnel zwischen dem Bahnhof Stadelhofen und dem Bahnhof Tiefenbrunnen. Unterbrochen durch kurze Einspielungen, in denen Interviews mit Bauleitern und vor allem Baulärm zu hören sind, erklären die ModeratorInnen den Sanierungsbedarf und das komplizierte Vorgehen bei den Bauarbeiten im Tunnel.",
+      "Nach über hundert jährigem Bestehen wird der Riesbachtunnel saniert. Zwei Reporter:innen fahren nachts mit dem Bauzug in den Tunnel und berichten direkt von der Baustelle.",
     image: "",
     src: "/audio/RR_Riesbachtunnel_kurz.mp3",
     originalUrl:
