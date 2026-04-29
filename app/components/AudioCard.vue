@@ -1,15 +1,25 @@
 <template>
-  <div class="flex-shrink-0 w-72 border border-black-coffee/20 bg-warm-white flex flex-col">
-    <div class="aspect-square overflow-hidden bg-black-coffee/10">
+  <div
+    class="border border-black-coffee/20 bg-warm-white flex flex-col"
+    :class="fullscreen ? 'w-full h-full' : 'flex-shrink-0 w-72'"
+  >
+    <!-- Close button (fullscreen only) -->
+    <div v-if="fullscreen" class="flex justify-end p-3 pb-0">
+      <button
+        class="text-black-coffee/40 hover:text-riesbach-rot transition-colors text-2xl leading-none"
+        :aria-label="$t('map.close')"
+        @click="$emit('close')"
+      >
+        ×
+      </button>
+    </div>
+
+    <div class="w-full overflow-hidden bg-black-coffee/10" :class="fullscreen ? 'flex-1' : 'aspect-square'">
       <img
-        v-if="clip.image"
-        :src="clip.image"
+        :src="clip.image || '/images/placeholder_audioplayer_radio.png'"
         :alt="clip.title"
         class="w-full h-full object-cover"
       />
-      <div v-else class="w-full h-full flex items-center justify-center">
-        <span class="text-4xl text-black-coffee/20">&#9654;</span>
-      </div>
     </div>
 
     <div class="p-4 flex flex-col gap-3 flex-1">
@@ -80,7 +90,8 @@
 <script setup lang="ts">
 import type { AudioClip } from '~/data/audioClips'
 
-const props = defineProps<{ clip: AudioClip }>()
+const props = defineProps<{ clip: AudioClip; fullscreen?: boolean }>()
+defineEmits<{ close: [] }>()
 
 const audioEl = ref<HTMLAudioElement | null>(null)
 const isPlaying = ref(false)

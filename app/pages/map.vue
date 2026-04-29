@@ -1,5 +1,5 @@
 <template>
-  <main class="min-h-screen pt-24 pb-20 px-6 md:px-12">
+  <main class="min-h-screen pt-36 pb-20 px-6 md:px-12">
     <div class="max-w-4xl mx-auto">
       <h1 class="text-4xl md:text-5xl font-bold tracking-widest uppercase mb-4">
         {{ $t('map.heading') }}
@@ -15,4 +15,6 @@
 
 <script setup lang="ts">
 import { mapDots } from '~/data/mapDots'
+
+definePageMeta({ navAlwaysVisible: true })
 </script>

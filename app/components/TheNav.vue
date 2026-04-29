@@ -42,11 +42,14 @@
 <script setup lang="ts">
 const { locale, locales, setLocale } = useI18n()
 const localePath = useLocalePath()
+const route = useRoute()
 
-const visible = ref(false)
+const scrolled = ref(false)
+const alwaysVisible = computed(() => !!route.meta.navAlwaysVisible)
+const visible = computed(() => alwaysVisible.value || scrolled.value)
 
 function onScroll() {
-  visible.value = window.scrollY > 80
+  scrolled.value = window.scrollY > 80
 }
 
 onMounted(() => {
