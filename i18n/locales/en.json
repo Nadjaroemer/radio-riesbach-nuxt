@@ -1,7 +1,9 @@
 {
   "nav": {
     "about": "About",
-    "map": "Map"
+    "map": "Map",
+    "menu": "Open menu",
+    "close": "Close menu"
   },
   "hero": {
     "subtitle": "A radio station from Zurich's Seefeld district"

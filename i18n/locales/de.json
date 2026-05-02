@@ -1,7 +1,9 @@
 {
   "nav": {
     "about": "Über uns",
-    "map": "Karte"
+    "map": "Karte",
+    "menu": "Menü öffnen",
+    "close": "Menü schliessen"
   },
   "hero": {
     "subtitle": "Das erste Quartierradio der Schweiz"
