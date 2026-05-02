@@ -20,6 +20,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   app: {
+    viewTransition: true,
     head: {
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
