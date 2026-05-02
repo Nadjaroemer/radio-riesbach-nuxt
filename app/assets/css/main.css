@@ -21,3 +21,25 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+@layer components {
+  .headline-strip {
+    @apply inline-block bg-black-coffee text-warm-white px-4 py-2 leading-none;
+  }
+
+  .headline-strip--page {
+    @apply text-4xl md:text-5xl font-bold tracking-widest uppercase;
+  }
+
+  .headline-strip--hero {
+    @apply text-5xl md:text-7xl font-bold tracking-widest uppercase;
+  }
+
+  .headline-strip--section {
+    @apply text-xs tracking-widest uppercase;
+  }
+
+  .headline-strip--subsection {
+    @apply text-2xl md:text-3xl font-bold uppercase tracking-wide leading-tight;
+  }
+}
