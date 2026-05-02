@@ -29,8 +29,8 @@
       </div>
 
       <!-- Description -->
-      <p v-if="clip.description" class="text-sm text-black-coffee/70 leading-relaxed">
-        {{ clip.description }}
+      <p v-if="localizedDescription" class="text-sm text-black-coffee/70 leading-relaxed">
+        {{ localizedDescription }}
       </p>
 
       <!-- Controls -->
@@ -88,11 +88,15 @@ const props = defineProps<{
 }>()
 
 defineEmits<{ close: [] }>()
+const { locale } = useI18n()
 
 const audioEl = ref<HTMLAudioElement | null>(null)
 const isPlaying = ref(false)
 const progress = ref(0)
 const currentTime = ref(0)
+const localizedDescription = computed(() =>
+  locale.value === 'en' ? props.clip.descriptionEn || props.clip.description : props.clip.description
+)
 
 const formattedTime = computed(() => {
   const m = Math.floor(currentTime.value / 60)

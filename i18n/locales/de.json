@@ -4,22 +4,37 @@
     "map": "Karte"
   },
   "hero": {
-    "subtitle": "Ein Radiosender aus dem Zürcher Seefeld"
+    "subtitle": "Das erste Quartier der Schweiz"
   },
   "home": {
-    "intro": "Radio Riesbach war ein freies Radio aus dem Zürcher Seefeld, das in den 1980er Jahren auf Sendung ging. Diese Ausstellung lädt ein, die Geschichte des Senders durch Originalaufnahmen, Fotografien und Zeitzeugenberichte zu erkunden.",
+    "intro": "Herzlich willkommen bei Radio Riesbach! Das war das erste Quartierradio der Schweiz und es sendete zwischen 1984 und 1991 aus dem ersten Stock des Gemeinschaftszentrums Riesbach in Zürich. Wir möchten Ihnen einen Einblick in diesen besonderen Quartiersender geben und zeigen, in welcher Zeit er entstand und welche Menschen ihn prägten. Etwa ein Drittel der insgesamt 709 Radio Riesbach produzierten Sendungen sind bis heute erhalten geblieben. Über die Links auf dieser Seite gelangen Sie direkt zu Ausschnitten aus ausgewählten Beiträgen. So erhalten Sie einen Eindruck, wie sich das Radio und auch das Quartier in den 1980er-Jahren anhörte. Dazu finden Sie immer auch den Link zur Seite des Sozialarchivs, wo das gesamte erhaltene Sendungearchiv zugänglich sind.",
     "audioHeading": "Originalaufnahmen",
-    "imagesHeading": "Bilder"
+    "videoHeading": "Video",
+    "videoTitle": "Ein Blick ins Archiv",
+    "videoBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
   },
   "audio": {
     "play": "Abspielen",
     "pause": "Pause",
     "stop": "Stop",
-    "original": "Originalaufnahme"
+    "original": "Originalaufnahme",
+    "more": "mehr",
+    "less": "weniger"
   },
   "about": {
     "heading": "Über Radio Riesbach",
-    "body": "Radio Riesbach war ein Freies Radio aus dem Quartier Seefeld in Zürich. Es sendete von [Jahr] bis [Jahr] und war Teil der aufkommenden Freiradiobewegung in der Schweiz. Der Sender war bekannt für seine lokalen Berichte, Musiksendungen und politischen Diskussionen."
+    "intro": [
+      "Am Anfang stand die Frage, was das Seefeld eigentlich für eine Geschichte hat. Wie es sich früher hier gelebt hat, wer hier wohnte und was die Menschen hier bewegte. Als Lucia Herrmann beim Nachforschen zufällig auf die alten Aufnahmen von Radio Riesbach stiess, war sie begeistert. Sie hörte sich durch Sendung für Sendung und erzählte Freund:innen und Nachbar:innen davon. Niemand in ihrem Umfeld wusste von diesem besonderen Quartierradio. Aber alle waren neugierig und wollten gerne mehr darüber erfahren und wissen, wie es in den 1980er-Jahren im Seefeld so war. Daraus entstand die Idee, diese Geschichten im Rahmen einer kleinen Ausstellung im GZ Riesbach für ein breiteres Publikum zugänglich zu machen.",
+      "Dass aus der Idee auch tatsächlich eine Ausstellung geworden ist, verdankt Lucia der tatkräftigen Unterstützung von Nadja Hesselbjerg und Carl Gustav Winthereik. Beide haben das Projekt mit viel Herzblut begleitet, haben mitgedacht und es weiterentwickelt. Nadja hat diese Website konzipiert und umgesetzt, dank derer Sie hier direkt in die früheren Sendungen reinhören können. Carl Gustav hat die Gestaltung übernommen und mit Feingefühl und Sorgfalt den damaligen Auftritt des Radios visuell ins Heute übertragen."
+    ],
+    "thanksHeading": "Wir bedanken uns ganz herzlich",
+    "thanks": [
+      "Bei Stefan Länzlinger vom Sozialarchiv Zürich, in dem sich der Nachlass von Radio Riesbach befindet. Das Sozialarchiv hat sich sofort bereit erklärt, einen Teil der Audiodateien für die Ausstellung zur Verfügung zu stellen.",
+      "Beim GZ Riesbach für die Gastfreundschaft und insbesondere bei Ursina Theus und Simone Glauser fürs Unterstützen beim Umsetzen der Initiative und die Vernissage mit Apéro zum Start der Ausstellung.",
+      "Beim Quartierverein Riesbach, der für die anfallenden Materialkosten des Projekts aufgekommen ist.",
+      "Bei der Druckerei XY, die die Plakate für die Ausstellung gesponsert hat.",
+      "Und natürlich bei den ehemaligen Radiomacher:innen für ihre Erzählungen und ihr Engagement, ganz besonders bei Liz Mennel, Stefan Schmid und Benjamin Fehr."
+    ]
   },
   "map": {
     "heading": "Karte des Seefelds",

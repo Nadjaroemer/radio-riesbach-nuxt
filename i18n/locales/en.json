@@ -7,19 +7,34 @@
     "subtitle": "A radio station from Zurich's Seefeld district"
   },
   "home": {
-    "intro": "Radio Riesbach was a free radio station from Zurich's Seefeld district, which went on air in the 1980s. This exhibition invites you to explore the station's history through original recordings, photographs and eyewitness accounts.",
+    "intro": "Welcome to Radio Riesbach! This was Switzerland’s first neighborhood radio station, broadcasting from 1984 to 1991 from the first floor of the Gemeinschaftszentrum Riesbach in Zurich. We’d like to give you a glimpse into this unique neighborhood station and shed some light on the era in which it emerged and the people who shaped it. About a third of the 709 programs produced by Radio Riesbach have been preserved to this day. The links on this page take you directly to excerpts from selected programs. This will give you a sense of what the radio station—and the neighborhood—sounded like in the 1980s. You’ll also find a link to the Sozialarchiv Zürich's website, where the entire preserved program archive is available.",
     "audioHeading": "Original Recordings",
-    "imagesHeading": "Images"
+    "videoHeading": "Video",
+    "videoTitle": "A Glimpse Into The Archive",
+    "videoBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
   },
   "audio": {
     "play": "Play",
     "pause": "Pause",
     "stop": "Stop",
-    "original": "Original recording"
+    "original": "Original recording",
+    "more": "more",
+    "less": "less"
   },
   "about": {
     "heading": "About Radio Riesbach",
-    "body": "Radio Riesbach was a free radio station from the Seefeld district in Zurich. It broadcast from [year] to [year] and was part of the emerging free radio movement in Switzerland. The station was known for its local reports, music programmes and political discussions."
+    "intro": [
+      "It all started with the question of what kind of history Seefeld actually has. What life was like here in the past, who lived here, and what moved the people here. When Lucia Herrmann stumbled upon the old recordings of Radio Riesbach while doing her research, she was thrilled. She listened to one broadcast after another and told her friends and neighbors about it. No one in her circle knew about this special neighborhood radio station. But everyone was curious and eager to learn more about it and find out what life was like in Seefeld in the 1980s. This gave rise to the idea of making these stories accessible to a wider audience through a small exhibition at GZ Riesbach.",
+      "The fact that this idea actually became an exhibition is largely thanks to the active support of Nadja Hesselbjerg and Carl Gustav Winthereik. Both put their heart and soul into the project, contributing their ideas and helping to develop it further. Nadja designed and implemented this website, thanks to which you can listen directly to the old broadcasts here. Carl Gustav handled the design and, with sensitivity and care, brought the radio’s original visual style into the present day."
+    ],
+    "thanksHeading": "With heartfelt thanks to",
+    "thanks": [
+      "Stefan Länzlinger at Sozialarchiv Zürich, where Radio Riesbach’s broadcasts and other materials are archived. Sozialarchiv was very supportive of the idea of an exhibition and immediately agreed to sharing some of the audio files with us.",
+      "GZ Riesbach for their hospitality and special thanks to Ursina Theus and Simone Glauser for supporting the initiative and the opening event, including the apéro in May.",
+      "Quartierverein Riesbach for their financial support.",
+      "Druckerei XY who sponsored the posters for the exhibition.",
+      "And last but not least: All the former radio producers for their stories and their dedication, especially Liz Mennel, Stefan Schmid, and Benjamin Fehr."
+    ]
   },
   "map": {
     "heading": "Map of Seefeld",

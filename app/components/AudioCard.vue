@@ -1,7 +1,8 @@
 <template>
   <div
+    :data-clip-id="clip.id"
     class="border border-black-coffee/20 bg-warm-white flex flex-col"
-    :class="fullscreen ? 'w-full h-full' : 'flex-shrink-0 w-72'"
+    :class="cardClasses"
   >
     <!-- Close button (fullscreen only) -->
     <div v-if="fullscreen" class="flex justify-end p-3 pb-0">
@@ -26,18 +27,18 @@
       <div>
         <span class="text-xs text-black-coffee/40 tracking-widest uppercase">{{ clip.id }}</span>
         <h3 class="font-bold text-base mt-0.5 leading-snug">{{ clip.title }}</h3>
-        <div v-if="clip.description" class="mt-1">
+        <div v-if="localizedDescription" class="mt-1">
           <p
             class="text-sm text-black-coffee/70 leading-relaxed overflow-hidden transition-all duration-300"
-            :class="expanded ? '' : 'line-clamp-3'"
+            :class="isExpanded ? '' : 'line-clamp-3'"
           >
-            {{ clip.description }}
+            {{ localizedDescription }}
           </p>
           <button
             class="text-xs text-riesbach-rot mt-1 hover:underline"
-            @click="expanded = !expanded"
+            @click="$emit('toggle-expand')"
           >
-            {{ expanded ? '▲ weniger' : '▼ mehr' }}
+            {{ isExpanded ? `▲ ${$t('audio.less')}` : `▼ ${$t('audio.more')}` }}
           </button>
         </div>
       </div>
@@ -90,14 +91,23 @@
 <script setup lang="ts">
 import type { AudioClip } from '~/data/audioClips'
 
-const props = defineProps<{ clip: AudioClip; fullscreen?: boolean }>()
-defineEmits<{ close: [] }>()
+const props = defineProps<{ clip: AudioClip; fullscreen?: boolean; expanded?: boolean; mobileActive?: boolean }>()
+const emit = defineEmits<{ close: []; 'toggle-expand': []; 'play-state': [boolean] }>()
+const { locale } = useI18n()
 
 const audioEl = ref<HTMLAudioElement | null>(null)
 const isPlaying = ref(false)
-const expanded = ref(false)
 const progress = ref(0)
 const currentTime = ref(0)
+const localizedDescription = computed(() =>
+  locale.value === 'en' ? props.clip.descriptionEn || props.clip.description : props.clip.description
+)
+const isExpanded = computed(() => !!props.expanded)
+const cardClasses = computed(() => {
+  if (props.fullscreen) return 'w-full h-full'
+  if (props.mobileActive) return 'snap-start flex-shrink-0 w-[calc(100vw-3rem)] md:w-72 transition-[width] duration-300'
+  return 'snap-start flex-shrink-0 w-72 transition-[width] duration-300'
+})
 
 const formattedTime = computed(() => {
   const t = currentTime.value
@@ -111,9 +121,11 @@ function togglePlay() {
   if (isPlaying.value) {
     audioEl.value.pause()
     isPlaying.value = false
+    emit('play-state', false)
   } else {
     audioEl.value.play()
     isPlaying.value = true
+    emit('play-state', true)
   }
 }
 
@@ -124,6 +136,7 @@ function stop() {
   isPlaying.value = false
   progress.value = 0
   currentTime.value = 0
+  emit('play-state', false)
 }
 
 function onTimeUpdate() {
@@ -138,6 +151,7 @@ function onEnded() {
   isPlaying.value = false
   progress.value = 0
   currentTime.value = 0
+  emit('play-state', false)
 }
 
 function seek(e: MouseEvent) {

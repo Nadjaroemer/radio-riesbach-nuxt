@@ -45,7 +45,8 @@ const localePath = useLocalePath()
 const route = useRoute()
 
 const scrolled = ref(false)
-const alwaysVisible = computed(() => !!route.meta.navAlwaysVisible)
+const homePath = computed(() => localePath('/'))
+const alwaysVisible = computed(() => route.path !== homePath.value)
 const visible = computed(() => alwaysVisible.value || scrolled.value)
 
 function onScroll() {
@@ -53,6 +54,7 @@ function onScroll() {
 }
 
 onMounted(() => {
+  onScroll()
   window.addEventListener('scroll', onScroll, { passive: true })
 })
 
