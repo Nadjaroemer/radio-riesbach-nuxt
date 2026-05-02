@@ -10,12 +10,11 @@
         </NuxtLink>
 
         <button
-          class="flex items-center gap-3 md:hidden"
+          class="flex items-center md:hidden"
           :aria-label="mobileMenuOpen ? $t('nav.close') : $t('nav.menu')"
           :aria-expanded="mobileMenuOpen"
           @click="mobileMenuOpen = !mobileMenuOpen"
         >
-          <img src="/images/logo.png" alt="" class="h-8 w-auto brightness-0 invert" />
           <span class="flex flex-col gap-1.5">
             <span class="h-0.5 w-6 bg-warm-white transition-transform duration-300" :class="mobileMenuOpen ? 'translate-y-2 rotate-45' : ''" />
             <span class="h-0.5 w-6 bg-warm-white transition-opacity duration-300" :class="mobileMenuOpen ? 'opacity-0' : 'opacity-100'" />
