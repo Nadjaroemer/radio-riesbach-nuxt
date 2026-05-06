@@ -92,7 +92,7 @@
 import type { AudioClip } from '~/data/audioClips'
 
 const props = defineProps<{ clip: AudioClip; fullscreen?: boolean; expanded?: boolean; mobileActive?: boolean; grid?: boolean }>()
-const emit = defineEmits<{ close: []; 'toggle-expand': []; 'play-state': [boolean] }>()
+const emit = defineEmits<{ close: []; 'toggle-expand': []; 'play-state': [boolean]; 'open-mobile-player': [] }>()
 const { locale } = useI18n()
 
 const audioEl = ref<HTMLAudioElement | null>(null)
@@ -118,6 +118,11 @@ const formattedTime = computed(() => {
 })
 
 function togglePlay() {
+  if (props.grid && props.mobileActive) {
+    emit('open-mobile-player')
+    return
+  }
+
   if (!audioEl.value) return
   if (isPlaying.value) {
     audioEl.value.pause()

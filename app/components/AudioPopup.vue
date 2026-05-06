@@ -85,6 +85,7 @@ import type { AudioClip } from '~/data/audioClips'
 const props = defineProps<{
   clip: AudioClip
   fullscreen?: boolean
+  autoplay?: boolean
 }>()
 
 defineEmits<{ close: [] }>()
@@ -115,6 +116,12 @@ function togglePlay() {
   }
 }
 
+async function play() {
+  if (!audioEl.value) return
+  await audioEl.value.play()
+  isPlaying.value = true
+}
+
 function stop() {
   if (!audioEl.value) return
   audioEl.value.pause()
@@ -142,6 +149,16 @@ function seek(e: MouseEvent) {
   const rect = bar.getBoundingClientRect()
   audioEl.value.currentTime = ((e.clientX - rect.left) / rect.width) * audioEl.value.duration
 }
+
+onMounted(async () => {
+  if (!props.autoplay) return
+  try {
+    await nextTick()
+    await play()
+  } catch {
+    isPlaying.value = false
+  }
+})
 
 onUnmounted(() => stop())
 </script>
