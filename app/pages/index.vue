@@ -12,7 +12,18 @@
       <h2 class="headline-strip headline-strip--section mb-8">
         {{ $t("home.audioHeading") }}
       </h2>
-      <AudioSlider :clips="audioClips" />
+      <div class="space-y-8">
+        <div class="max-w-3xl">
+          <h3 class="headline-strip headline-strip--subsection mb-4">
+            {{ $t("home.audioTitle") }}
+          </h3>
+          <p class="text-base leading-relaxed text-black-coffee/80">
+            {{ $t("home.audioBody") }}
+          </p>
+        </div>
+
+        <AudioSlider :clips="audioClips" />
+      </div>
     </section>
 
     <section class="px-6 md:px-12 py-16">

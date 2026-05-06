@@ -29,12 +29,6 @@
           >
             {{ $t('nav.about') }}
           </NuxtLink>
-          <NuxtLink
-            :to="localePath('/map')"
-            class="text-warm-white text-sm tracking-widest uppercase no-underline hover:text-riesbach-rot transition-colors"
-          >
-            {{ $t('nav.map') }}
-          </NuxtLink>
 
           <div class="flex items-center text-sm tracking-widest">
             <template v-for="(loc, i) in locales" :key="loc.code">
@@ -71,13 +65,6 @@
             @click="closeMenu"
           >
             {{ $t('nav.about') }}
-          </NuxtLink>
-          <NuxtLink
-            :to="localePath('/map')"
-            class="text-warm-white text-2xl tracking-[0.22em] uppercase no-underline hover:text-riesbach-rot transition-colors"
-            @click="closeMenu"
-          >
-            {{ $t('nav.map') }}
           </NuxtLink>
           <div class="flex items-center text-lg tracking-[0.22em] uppercase">
             <template v-for="(loc, i) in locales" :key="loc.code">
