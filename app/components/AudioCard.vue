@@ -91,7 +91,7 @@
 <script setup lang="ts">
 import type { AudioClip } from '~/data/audioClips'
 
-const props = defineProps<{ clip: AudioClip; fullscreen?: boolean; expanded?: boolean; mobileActive?: boolean }>()
+const props = defineProps<{ clip: AudioClip; fullscreen?: boolean; expanded?: boolean; mobileActive?: boolean; grid?: boolean }>()
 const emit = defineEmits<{ close: []; 'toggle-expand': []; 'play-state': [boolean] }>()
 const { locale } = useI18n()
 
@@ -105,6 +105,7 @@ const localizedDescription = computed(() =>
 const isExpanded = computed(() => !!props.expanded)
 const cardClasses = computed(() => {
   if (props.fullscreen) return 'w-full h-full'
+  if (props.grid) return 'w-full min-w-0 h-full'
   if (props.mobileActive) return 'snap-start flex-shrink-0 w-[calc(100vw-3rem)] md:w-72 transition-[width] duration-300'
   return 'snap-start flex-shrink-0 w-72 transition-[width] duration-300'
 })

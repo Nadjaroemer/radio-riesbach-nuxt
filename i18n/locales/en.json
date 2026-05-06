@@ -21,7 +21,9 @@
     "stop": "Stop",
     "original": "Original recording",
     "more": "more",
-    "less": "less"
+    "less": "less",
+    "listenAll": "Listen to all recordings",
+    "showLess": "Show fewer recordings"
   },
   "about": {
     "heading": "About Radio Riesbach",
@@ -47,6 +49,7 @@
     "years": "1984–1991",
     "project": "A project by Lucia Herrmann",
     "archive": "Archive material: Sozialarchiv Zürich",
+    "contactLabel": "Contact:",
     "copyright": "© 2026 Radio Riesbach"
   }
 }

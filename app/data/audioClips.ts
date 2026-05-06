@@ -1,5 +1,6 @@
 export interface AudioClip {
   id: string
+  slug: string
   title: string
   description: string
   descriptionEn?: string
@@ -11,6 +12,7 @@ export interface AudioClip {
 export const audioClips: AudioClip[] = [
   {
     id: '01',
+    slug: 'griechischer-markt',
     title: 'Griechischer Markt',
     description:
       'Interview mit einer griechischen Anwohnerin, die sich für den kulturellen Austausch im Quartier engagiert. Sie berichtet auch über Schwierigkeiten von nicht-deutschsprechenden Eltern in der Schweiz.',
@@ -22,6 +24,7 @@ export const audioClips: AudioClip[] = [
   },
   {
     id: '02',
+    slug: 'interview-1-april-1984',
     title: 'Interview 1. April 1984',
     description: '',
     descriptionEn: '',
@@ -31,6 +34,7 @@ export const audioClips: AudioClip[] = [
   },
   {
     id: '03',
+    slug: 'feldeggstrasse',
     title: 'Feldeggstrasse',
     description:
       'Auf einem Spaziergang durch die Feldeggstrasse erzählt Liz Mennel, welche Arten von Läden und Geschäften es dort gibt. Dann besucht sie den Städtischen Kindergarten und lässt die Kinder dort zu Wort kommen. Schliesslich kommt sie an zwei Bauruinen vorbei. Sie erklärt, warum die Häuser so verfallen sind und wie es damit weitergehen könnte.',
@@ -42,6 +46,7 @@ export const audioClips: AudioClip[] = [
   },
   {
     id: '04',
+    slug: 'finissage-liz',
     title: 'Finissage – Liz',
     description: '',
     descriptionEn: '',
@@ -51,6 +56,7 @@ export const audioClips: AudioClip[] = [
   },
   {
     id: '05',
+    slug: 'haeuserabbruch-hoeschgasse',
     title: 'Häuserabbruch Höschgasse',
     description:
       'Die Liegenschaften an der Höschgasse 72, 74, 76 und 78 sollen abgebrochen werden. Bewohner:innen erzählen, wie es ist, dort zu wohnen, und warum sie hoffen, dass die Häuser bewahrt und renoviert werden können.',
@@ -62,6 +68,7 @@ export const audioClips: AudioClip[] = [
   },
   {
     id: '06',
+    slug: 'mittelstrasse',
     title: 'Mittelstrasse',
     description:
       'Eine Anwohnerin erinnert sich, wie ihre drei Kinder in den 1970er- und 1980er-Jahren an der Mittelstrasse aufgewachsen sind. Und wie sich die Strasse seither durch den zunehmenden Verkehr verändert hat. Liz Mennel stellt ein bekanntes Innenarchitekten-Paar vor, das an derselben Strasse wohnt.',
@@ -73,6 +80,7 @@ export const audioClips: AudioClip[] = [
   },
   {
     id: '07',
+    slug: 'abfallsackgebuehren',
     title: 'Abfallsackgebühren',
     description:
       'Im Quartier soll man neu für Abfallsäcke bezahlen müssen. Das neue Entsorgungskonzept des Kantons wird vorgestellt und einzelne Anwohner kommen zu Wort. Die Meinungen sind geteilt.',
@@ -84,6 +92,7 @@ export const audioClips: AudioClip[] = [
   },
   {
     id: '08',
+    slug: '50-sendung-quartierjournal',
     title: '50. Sendung – Quartierjournal',
     description: '',
     descriptionEn: '',
@@ -93,6 +102,7 @@ export const audioClips: AudioClip[] = [
   },
   {
     id: '09',
+    slug: 'schulwegsicherung',
     title: 'Schulwegsicherung',
     description:
       'Zwei Mütter aus dem Quartier berichten von den Schwierigkeiten und Gefahren, mit denen sie und ihre Kinder auf dem Schulweg konfrontiert sind. Anschliessend sprechen zwei Elternvertreter über den Verkehr im Quartier und Möglichkeiten, die Schulwege sicherer zu machen.',
@@ -104,6 +114,7 @@ export const audioClips: AudioClip[] = [
   },
   {
     id: '10',
+    slug: 'arbenzstrasse-1',
     title: 'Arbenzstrasse 1',
     description:
       'An der Arbenzstrasse 1 befindet sich das Personalhaus der Konfiserie «Sprüngli». Die Verwalterin erzählt, wer die Bewohner:innen des Hauses sind und wie das Personalhaus organisiert ist.',
@@ -115,6 +126,7 @@ export const audioClips: AudioClip[] = [
   },
   {
     id: '11',
+    slug: 'drogenauffangstation-tiefenbrunnen',
     title: 'Drogenauffangstation Tiefenbrunnen',
     description:
       'Ein Sozialarbeiter schildert den Ablauf in der Notschlafstelle. Hier können Jugendliche und junge Erwachsene mit Drogenproblemen die Nacht verbringen, Unterstützung erhalten und frühstücken.',
@@ -126,6 +138,7 @@ export const audioClips: AudioClip[] = [
   },
   {
     id: '12',
+    slug: 'signet',
     title: 'Signet',
     description: '',
     descriptionEn: '',
@@ -135,6 +148,7 @@ export const audioClips: AudioClip[] = [
   },
   {
     id: '13',
+    slug: 'finissage-peter',
     title: 'Finissage – Peter',
     description: '',
     descriptionEn: '',
@@ -144,6 +158,7 @@ export const audioClips: AudioClip[] = [
   },
   {
     id: '14',
+    slug: 'heimatstrasse',
     title: 'Heimatstrasse',
     description:
       'Liz Mennel erzählt die Geschichte der Heimatstrasse und der Eigenstrasse: Wie das Quartier Gaslampen bekam und ein eigenes Gaswerk. Und wann und warum die Dufourstrasse gebaut wurde.',
@@ -155,6 +170,7 @@ export const audioClips: AudioClip[] = [
   },
   {
     id: '15',
+    slug: 'lila-bus',
     title: 'Lila Bus',
     description:
       'Die Regisseurin Josy Meier hat einen Film über die Drogenprostitution und den Freierverkehr im Seefeld gedreht. Sie spricht über den «Lila Bus» und warum es ihn braucht. Der umgebaute Bus steht im Quartier, damit prostituierende Frauen einen Ort haben, an dem sie sich aufwärmen, zurückziehen und Unterstützung holen können. Film «Der Kunde ist König» (1992).',
@@ -166,6 +182,7 @@ export const audioClips: AudioClip[] = [
   },
   {
     id: '16',
+    slug: 'riesbachtunnel',
     title: 'Riesbachtunnel',
     description:
       'Nach über hundertjährigem Bestehen wird der Riesbachtunnel saniert. Zwei Reporter:innen fahren nachts mit dem Bauzug in den Tunnel und berichten direkt von der Baustelle.',

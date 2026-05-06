@@ -19,21 +19,21 @@
       <h2 class="headline-strip headline-strip--section mb-8">
         {{ $t("home.videoHeading") }}
       </h2>
-      <div class="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
-        <div class="overflow-hidden bg-black-coffee/10">
-          <video controls playsinline preload="metadata" class="w-full h-auto">
-            <source :src="videoSrc" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <div class="max-w-xl">
+      <div class="space-y-8">
+        <div class="max-w-3xl">
           <h3 class="headline-strip headline-strip--subsection mb-4">
             {{ $t("home.videoTitle") }}
           </h3>
           <p class="text-base leading-relaxed text-black-coffee/80">
             {{ $t("home.videoBody") }}
           </p>
+        </div>
+
+        <div class="overflow-hidden bg-black-coffee/10">
+          <video controls playsinline preload="metadata" class="block w-full h-auto">
+            <source :src="videoSrc" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </section>

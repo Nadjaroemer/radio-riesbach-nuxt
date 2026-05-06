@@ -15,6 +15,12 @@
       <div class="text-right text-sm leading-relaxed">
         <p>{{ $t('footer.project') }}</p>
         <p class="text-warm-white/50 mt-1">{{ $t('footer.archive') }}</p>
+        <p class="mt-1">
+          {{ $t('footer.contactLabel') }}
+          <a href="mailto:kontakt@radio-riesbach.ch" class="text-warm-white/80 hover:text-warm-white underline underline-offset-2">
+            kontakt@radio-riesbach.ch
+          </a>
+        </p>
       </div>
     </div>
 
