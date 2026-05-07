@@ -10,6 +10,13 @@
   },
   "home": {
     "intro": "Welcome to Radio Riesbach! This was Switzerland’s first neighborhood radio station, broadcasting from 1984 to 1991 from the first floor of the Gemeinschaftszentrum Riesbach in Zurich. We’d like to give you a glimpse into this unique neighborhood station and shed some light on the era in which it emerged and the people who shaped it. About a third of the 709 programs produced by Radio Riesbach have been preserved to this day. The links on this page take you directly to excerpts from selected programs. This will give you a sense of what the radio station—and the neighborhood—sounded like in the 1980s. You’ll also find a link to the Sozialarchiv Zürich's website, where the entire preserved program archive is available.",
+    "introParagraphs": [
+      "Welcome to Radio Riesbach! This was Switzerland’s first neighborhood radio station, broadcasting from 1984 to 1991 from the first floor of the Gemeinschaftszentrum Riesbach in Zurich.",
+      "We’d like to give you a glimpse into this unique neighborhood station and shed some light on the era in which it emerged and the people who shaped it. About a third of the 709 programs produced by Radio Riesbach have been preserved to this day.",
+      "The links on this page take you directly to excerpts from selected programs. This will give you a sense of what the radio station and the neighborhood sounded like in the 1980s. You’ll also find a link to the Sozialarchiv Zürich website, where the entire preserved program archive is available."
+    ],
+    "contents": "Contents",
+    "sectionLorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "audioHeading": "Original Recordings",
     "audioTitle": "A Glimpse Into The Archive",
     "audioBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
@@ -26,6 +33,11 @@
     "less": "less",
     "listenAll": "Listen to all recordings",
     "showLess": "Show fewer recordings"
+  },
+  "audioDetail": {
+    "contents": "Contents",
+    "listen": "Listen",
+    "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   "about": {
     "heading": "About Radio Riesbach",
@@ -49,9 +61,9 @@
   },
   "footer": {
     "years": "1984–1991",
-    "project": "A project by Lucia Herrmann",
-    "archive": "Archive material: Sozialarchiv Zürich",
-    "contactLabel": "Contact:",
-    "copyright": "© 2026 Radio Riesbach"
+    "projectHeading": "A project by",
+    "contactHeading": "Contact",
+    "archiveHeading": "Archive material",
+    "supportHeading": "Made possible with support from:"
   }
 }
