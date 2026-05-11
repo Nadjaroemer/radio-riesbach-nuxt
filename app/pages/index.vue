@@ -73,7 +73,10 @@
         <h2 class="headline-strip headline-strip--section mb-8">
           {{ audioHeading }}
         </h2>
-        <div>
+        <div class="space-y-8">
+          <p class="max-w-4xl text-[16px] leading-[1.75] tracking-[0.01em] text-black-coffee">
+            {{ audioBody }}
+          </p>
           <AudioSlider :clips="audioClips" />
         </div>
       </div>
@@ -241,6 +244,12 @@ const sectionLorem = computed(
 
 const audioHeading = computed(() =>
   locale.value === "en" ? "Listen" : "Reinhören",
+);
+
+const audioBody = computed(() =>
+  locale.value === "en"
+    ? "Get an idea of what Radio Riesbach and the neighborhood sounded like in the 1980s. Here you’ll find a selection of short audio clips that were broadcast between 1984 and 1991 – via a link below you can get to the archived version of the program and listen it in full length."
+    : "Verschaffen Sie sich einen Eindruck davon, wie sich Radio Riesbach und die 1980er Jahre im Quartier anhörten. Hier finden Sie eine Auswahl an Stimmen, die zwischen 1984 und 1991 gesendet wurden – über den Link unterhalb jeder Aufzeichnung gelangen Sie zur dazugehörigen Sendung und können diese in voller Länge nachhören.",
 );
 
 const introParagraphs = computed(() => {
