@@ -31,16 +31,25 @@
 
       <div class="text-lg leading-relaxed">
         <h3 class="mb-4 font-bold">{{ $t('footer.supportHeading') }}</h3>
-        <div class="space-y-6">
+        <div class="grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4">
           <a
             v-for="supporter in supporters"
             :key="supporter.label"
             :href="supporter.href"
             target="_blank"
             rel="noopener"
-            class="block underline underline-offset-2 transition-opacity hover:opacity-80"
+            class="group block no-underline transition-opacity hover:opacity-80"
           >
-            {{ supporter.label }}
+            <span class="flex h-10 items-end">
+              <img
+                :src="supporter.logo"
+                :alt="supporter.label"
+                class="max-h-8 max-w-28 object-contain"
+              />
+            </span>
+            <span class="mt-2 block text-sm leading-snug text-warm-white underline underline-offset-2">
+              {{ supporter.label }}
+            </span>
           </a>
         </div>
       </div>
@@ -67,19 +76,31 @@ const archiveItems = computed(() =>
     : ['Sozialarchiv Zürich', 'Schweizerisches Bundesarchiv', 'Privatbesitz Liz Mennel']
 )
 
+const supporterLogos: Record<string, string> = {
+  'Sozialarchiv Zürich': '/images/supporters/sozialarchiv-clean.svg',
+  'Quartierverein Riesbach': '/images/supporters/quartierverein-riesbach-clean.svg',
+  'GZ Riesbach': '/images/supporters/gz-zuerich.svg',
+  'Eichholzer Druck + Kopie AG': '/images/supporters/eichholzer.jpg'
+}
+
 const supporters = computed(() =>
-  locale.value === 'en'
+  (locale.value === 'en'
     ? [
         { label: 'Sozialarchiv Zurich', href: 'https://www.sozialarchiv.ch/' },
-        { label: 'Quartierverein Riesbach', href: 'https://www.qv-riesbach.ch/' },
+        { label: 'Quartierverein Riesbach', href: 'https://8008.ch/' },
         { label: 'GZ Riesbach', href: 'https://gz-zh.ch/gz-riesbach/' },
-        { label: 'Eichholzer Druck + Kopie AG', href: 'https://www.eichholzer.ch/' }
+        { label: 'Eichholzer Druck + Kopie AG', href: 'https://eichholzerdruck.ch/' }
       ]
     : [
         { label: 'Sozialarchiv Zürich', href: 'https://www.sozialarchiv.ch/' },
-        { label: 'Quartierverein Riesbach', href: 'https://www.qv-riesbach.ch/' },
+        { label: 'Quartierverein Riesbach', href: 'https://8008.ch/' },
         { label: 'GZ Riesbach', href: 'https://gz-zh.ch/gz-riesbach/' },
-        { label: 'Eichholzer Druck + Kopie AG', href: 'https://www.eichholzer.ch/' }
+        { label: 'Eichholzer Druck + Kopie AG', href: 'https://eichholzerdruck.ch/' }
       ]
+  ).map((supporter) => ({
+    ...supporter,
+    logo: supporterLogos[supporter.label]
+      ?? supporterLogos[supporter.label.replace('Zurich', 'Zürich')]
+  }))
 )
 </script>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 235 84" role="img" aria-labelledby="title">
+  <title id="title">Schweizerisches Sozialarchiv</title>
+  <g fill="#e30613">
+    <text x="0" y="55" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Schweizerisches</text>
+    <text x="53" y="78" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400">Sozialarchiv</text>
+    <g transform="translate(198 3)" stroke="#e30613" stroke-width="1.5" fill="none">
+      <circle cx="18" cy="18" r="17" />
+      <path d="M7 11h22M7 16h22M7 21h22M11 7v29M18 7v29M25 7v29" />
+      <g fill="#e30613" stroke="none">
+        <circle cx="11" cy="10" r="2.4" />
+        <circle cx="18" cy="9" r="2.4" />
+        <circle cx="25" cy="10" r="2.4" />
+        <rect x="8.8" y="13" width="4.4" height="12" rx="1.5" />
+        <rect x="15.8" y="12" width="4.4" height="13" rx="1.5" />
+        <rect x="22.8" y="13" width="4.4" height="12" rx="1.5" />
+      </g>
+    </g>
+  </g>
+</svg>
