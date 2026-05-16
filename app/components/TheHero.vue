@@ -1,10 +1,10 @@
 <template>
-  <section class="relative aspect-[1200/725] w-full overflow-hidden md:h-screen md:aspect-auto">
+  <section class="relative h-[100svh] min-h-[32rem] w-full overflow-hidden md:h-screen">
     <img
       v-if="src"
       :src="src"
       :alt="alt"
-      class="absolute inset-0 w-full h-full object-cover"
+      class="absolute inset-0 h-full w-full object-cover"
     />
     <div
       v-else
