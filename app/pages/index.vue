@@ -2,6 +2,28 @@
   <main>
     <TheHero src="/images/hero.png" :alt="$t('hero.subtitle')" />
 
+    <aside class="sticky top-[4.5rem] z-30 border-y border-black-coffee/15 bg-warm-white px-6 py-4 lg:hidden">
+      <details class="group">
+        <summary class="headline-strip headline-strip--section inline-flex cursor-pointer list-none items-center gap-3">
+          <span>{{ contentsLabel }}</span>
+          <span aria-hidden="true" class="text-sm leading-none group-open:hidden">+</span>
+          <span aria-hidden="true" class="hidden text-sm leading-none group-open:inline">-</span>
+        </summary>
+        <nav aria-label="Contents" class="mt-5">
+          <ul class="space-y-3 text-sm leading-relaxed">
+            <li v-for="section in homeSections" :key="section.id">
+              <a
+                :href="`#${section.id}`"
+                class="!text-black-coffee underline decoration-black-coffee underline-offset-2 transition-colors hover:!text-riesbach-rot hover:decoration-riesbach-rot"
+              >
+                {{ section.label }}
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+
     <section id="begruessung" class="px-6 py-20 md:px-12">
       <div
         class="mx-auto max-w-7xl lg:grid lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16"
@@ -16,7 +38,7 @@
           </p>
         </div>
 
-        <aside class="mt-12 lg:mt-0">
+        <aside class="hidden lg:block">
           <div class="space-y-5 lg:sticky lg:top-32">
             <h2
               class="headline-strip headline-strip--section block w-fit ml-auto"
