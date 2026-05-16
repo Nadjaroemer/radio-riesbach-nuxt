@@ -5,6 +5,7 @@
         v-for="clip in visibleClips"
         :key="clip.id"
         :clip="clip"
+        :display-id="clip.displayId"
         grid
         :expanded="expandedClipId === clip.id"
         :mobile-active="isMobile"
@@ -49,7 +50,13 @@ const expandedClipId = ref<string | null>(null)
 const isExpanded = ref(false)
 const isMobile = ref(false)
 const mobilePlayerClip = ref<AudioClip | null>(null)
-const visibleClips = computed(() => (isExpanded.value ? props.clips : props.clips.slice(0, previewCount)))
+const orderedClips = computed(() =>
+  props.clips.map((clip, index) => ({
+    ...clip,
+    displayId: String(index + 1).padStart(2, '0')
+  }))
+)
+const visibleClips = computed(() => (isExpanded.value ? orderedClips.value : orderedClips.value.slice(0, previewCount)))
 
 function toggleExpanded(id: string) {
   expandedClipId.value = expandedClipId.value === id ? null : id

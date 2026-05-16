@@ -25,7 +25,7 @@
 
     <div class="p-4 flex flex-col gap-3 flex-1">
       <div>
-        <span class="text-xs text-black-coffee/40 tracking-widest uppercase">{{ clip.id }}</span>
+        <span class="text-xs text-black-coffee/40 tracking-widest uppercase">{{ displayId || clip.id }}</span>
         <h3 class="font-bold text-base mt-0.5 leading-snug">{{ clip.title }}</h3>
         <div v-if="localizedDescription" class="mt-1">
           <p
@@ -91,7 +91,7 @@
 <script setup lang="ts">
 import type { AudioClip } from '~/data/audioClips'
 
-const props = defineProps<{ clip: AudioClip; fullscreen?: boolean; expanded?: boolean; mobileActive?: boolean; grid?: boolean }>()
+const props = defineProps<{ clip: AudioClip; displayId?: string; fullscreen?: boolean; expanded?: boolean; mobileActive?: boolean; grid?: boolean }>()
 const emit = defineEmits<{ close: []; 'toggle-expand': []; 'play-state': [boolean]; 'open-mobile-player': [] }>()
 const { locale } = useI18n()
 
