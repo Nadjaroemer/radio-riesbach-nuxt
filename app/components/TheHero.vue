@@ -22,7 +22,7 @@
         class="hero-logo-motion w-[min(36vw,15.5rem)] min-w-24 shrink-0 sm:w-[min(42vw,15.5rem)] sm:min-w-32"
       />
       <p
-        class="mb-3 bg-black-coffee px-2.5 py-1.5 text-[9px] leading-none tracking-[0.02em] text-warm-white shadow-[0_1px_0_rgba(255,255,255,0.18)] sm:mb-5 sm:px-3 sm:text-xs md:mb-6 md:px-4 md:py-2 md:text-sm"
+        class="mb-3 bg-black-coffee px-2.5 py-1.5 text-[9px] leading-none tracking-[0.02em] text-warm-white shadow-[0_1px_0_rgba(255,255,255,0.18)] sm:mb-5 sm:px-4 sm:py-2 sm:text-sm md:mb-6 md:px-5 md:py-2.5 md:text-base"
       >
         Das erste Quartierradio der Schweiz
       </p>
