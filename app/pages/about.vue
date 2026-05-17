@@ -21,8 +21,8 @@
           <li
             v-for="(item, index) in aboutThanks"
             :key="index"
+            v-html="linkThanksItem(rt(item))"
           >
-            {{ rt(item) }}
           </li>
         </ul>
       </section>
@@ -35,4 +35,33 @@ const { rt, tm } = useI18n()
 
 const aboutIntro = computed(() => tm('about.intro') as unknown[])
 const aboutThanks = computed(() => tm('about.thanks') as unknown[])
+
+const thanksLinks: Record<string, string> = {
+  'Sozialarchiv Zürich': 'https://www.sozialarchiv.ch/',
+  'GZ Riesbach': 'https://gz-zh.ch/gz-riesbach/',
+  'Quartierverein Riesbach': 'https://8008.ch/',
+  'Druckerei Eichholz Druck + Kopie AG': 'https://eichholzerdruck.ch/'
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#039;')
+}
+
+function linkThanksItem(value: string) {
+  let output = escapeHtml(value)
+
+  for (const [label, href] of Object.entries(thanksLinks)) {
+    output = output.replaceAll(
+      label,
+      `<a href="${href}" target="_blank" rel="noopener" class="underline underline-offset-2">${label}</a>`
+    )
+  }
+
+  return output
+}
 </script>
