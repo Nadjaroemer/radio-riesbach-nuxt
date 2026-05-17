@@ -47,9 +47,6 @@
                 class="max-h-8 max-w-28 object-contain"
               />
             </span>
-            <span class="mt-2 block text-sm leading-snug text-warm-white underline underline-offset-2">
-              {{ supporter.label }}
-            </span>
           </a>
         </div>
       </div>
