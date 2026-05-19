@@ -76,7 +76,7 @@ const archiveItems = computed(() =>
 const supporterLogos: Record<string, string> = {
   'Sozialarchiv Zürich': '/images/supporters/sozialarchiv-clean.svg',
   'Quartierverein Riesbach': '/images/supporters/quartierverein-riesbach-clean.svg',
-  'GZ Riesbach': '/images/supporters/gz-zuerich.svg',
+  'GZ Riesbach': '/images/supporters/gz-riesbach.svg',
   'Eichholzer Druck + Kopie AG': '/images/supporters/eichholzer.jpg'
 }
 
