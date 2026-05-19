@@ -2,12 +2,24 @@
   <main>
     <TheHero src="/images/hero.png" :alt="$t('hero.subtitle')" />
 
-    <aside class="sticky top-[4.5rem] z-30 border-y border-black-coffee/15 bg-warm-white px-6 py-4 lg:hidden">
+    <aside
+      class="sticky top-[4.5rem] z-30 border-y border-black-coffee/15 bg-warm-white px-6 py-4 lg:hidden"
+    >
       <details class="group">
-        <summary class="headline-strip headline-strip--section inline-flex cursor-pointer list-none items-center gap-3">
+        <summary
+          class="headline-strip headline-strip--section inline-flex cursor-pointer list-none items-center gap-3"
+        >
           <span>{{ contentsLabel }}</span>
-          <span aria-hidden="true" class="text-sm leading-none group-open:hidden">+</span>
-          <span aria-hidden="true" class="hidden text-sm leading-none group-open:inline">-</span>
+          <span
+            aria-hidden="true"
+            class="text-sm leading-none group-open:hidden"
+            >+</span
+          >
+          <span
+            aria-hidden="true"
+            class="hidden text-sm leading-none group-open:inline"
+            >-</span
+          >
         </summary>
         <nav aria-label="Contents" class="mt-5">
           <ul class="space-y-3 text-sm leading-relaxed">
@@ -92,11 +104,13 @@
 
     <section id="reinhoeren" class="px-6 py-12 overflow-hidden md:px-12">
       <div class="mx-auto max-w-7xl">
-        <h2 class="headline-strip headline-strip--section mb-8">
+        <h2 class="headline-strip headline-strip--subsection mb-8">
           {{ audioHeading }}
         </h2>
         <div class="space-y-8">
-          <p class="max-w-4xl text-[16px] leading-[1.75] tracking-[0.01em] text-black-coffee">
+          <p
+            class="max-w-4xl text-[16px] leading-[1.75] tracking-[0.01em] text-black-coffee"
+          >
             {{ audioBody }}
           </p>
           <AudioSlider :clips="audioClips" />
@@ -143,7 +157,7 @@
 </template>
 
 <script setup lang="ts">
-const { locale } = useI18n();
+const { locale, tm, rt } = useI18n();
 import { audioClips } from "~/data/audioClips";
 
 const videoSrc = "/video/radio_riesbach_compressed.mp4";
@@ -166,17 +180,17 @@ const homeSections = computed(() => [
             "Switzerland’s first community radio station broadcast from the Gemeinschaftszentrum Riesbach between 1984 and 1991.",
             "When Radio Riesbach first went on the air on April 1, 1984, it was met with doubt. The idea of a small community radio station was nice, but could it actually work? Absolutely! Over the next seven years, the station could be heard twice a week for one to two hours. Anyone who tuned their radio to the right frequency on Thursday evenings or Sunday afternoons could hear what was happening in the neighborhood. That’s because every broadcast began with the “Quartierjournal,” a roundup of the most important events and information for the area between Tiefenbrunnen, Bellevue, the lakefront, and Klusplatz.",
             "The programs were created by about a dozen neighborhood residents, some more involved than others, who, until then, had little to no broadcasting experience. Everyone worked for the radio station on a volunteer basis. There was an editorial group that met every two weeks to set the upcoming schedule. And a technical group that ensured all programs were properly recorded and broadcast. Radio Riesbach’s studio was located on the first floor of the Gemeinschaftszentrum, with the antenna on the rooftop.",
-            "The neighborhood radio station was supported by an association that had between 140 and 180 members over the years. The 30 francs each member paid annually were an important source of income, as Radio Riesbach was completely ad-free. In addition, there were donations, patron contributions, and earnings from flea markets and festivals. But finances were always tight, as the radio station had to pay not only for operating and material costs but also for fees to use the broadcast frequency and to air music.",
+            "The neighborhood radio station was supported by an association that had between 140 and 180 members over the years. The 30 francs each member paid annually were an important source of income, as Radio Riesbach was completely ad-free. In addition, there were donations, patron contributions, and earnings from flea markets and festivals. But finances were rather tight, as the radio station had to pay not only for operating and material costs but also for fees to use the broadcast frequency and to air music.",
             "Radio Riesbach aspired to be a listener-driven radio station, from the neighborhood, by and for the neighborhood. The editorial team encouraged local residents to create their own programs with their assistance. Over the years, they experimented also with various formats. Radio Riesbach broadcast interviews and group discussions, recorded sounds from neighborhood walks, spoke with residents about their childhood in the neighborhood, and interviewed them on current topics right on the street. Sometimes they even broadcasted from outside the studio, from a meadow, the lakeside, or, during live broadcasts lasting several hours, from the “Swiss Radio and Television Exhibition” at the Zurich Kongresshaus.",
             "The creators dreamed of expanding the Radio Riesbach model to other neighborhoods in the city. To do so, they intended to lend their broadcast frequency to other neighborhood radio stations on days when Radio Riesbach was not broadcasting. Unfortunately, the “Radio mobil” concept was never realized. And the desired level of participation from their own neighborhood also fell short of expectations. After the core team had searched in vain for new, dedicated radio voices, they announced in the spring of 1990 that they would not apply for a new broadcasting license. A few months before the station went off the air, all of the recording equipment was stolen, but the radio producers did not give up.",
             "After 709 broadcasts, the Radio Riesbach team bid farewell to the airwaves at the end of March 1991 with a big closing party at the GZ. Fortunately, all the broadcasts were recorded, and some of them have been preserved. So today we can listen to what this unique radio project and the turbulent 1980s in the neighbourhood sounded like.",
           ]
         : [
             "Als Radio Riesbach am 1. April 1984 auf Sendung ging, waren viele skeptisch.",
-            "Die Idee eines solchen Kleinstradios war ja schön, aber liess sich das überhaupt umsetzen? Und wie: In den folgenden sieben Jahren war der Sender zwei Mal die Woche für ein bis zwei Stunden zu hören. Wer am Donnerstag Abend oder am Sonntag Mittag sein Radiogerät auf der richtigen Frequenz einstellte, konnte hören, was aktuell im Quartier lief. Denn jede Sendung begann mit dem «Quartierjournal», einer Zusammenstellung der wichtigsten Veranstaltungen und Informationen für das Gebiet zwischen Tiefenbrunnen, Bellevue, Seeufer und Klusplatz.",
+            "Die Idee eines solchen Kleinstradios war ja schön, aber liess sich das überhaupt umsetzen? Und wie: In den folgenden sieben Jahren war der Sender zwei Mal die Woche für ein bis zwei Stunden zu hören. Wer Donnerstagabends oder Sonntagmittags sein Radiogerät auf der richtigen Frequenz einstellte, konnte hören, was aktuell im Quartier lief. Denn jede Sendung begann mit dem «Quartierjournal», einer Zusammenstellung der wichtigsten Veranstaltungen und Informationen für das Gebiet zwischen Tiefenbrunnen, Bellevue, Seeufer und Klusplatz.",
             "Gemacht wurden die Sendungen von etwa einem Dutzend mehr oder weniger involvierter Quartierbewohner:innen, die bis dahin noch keine oder kaum Radioerfahrung hatten. Alle waren ehrenamtlich für das Radio im Einsatz. Es gab eine Redaktionsgruppe, die sich alle zwei Wochen traf und das anstehende Programm festlegte. Und eine Technik-Gruppe, die dafür sorgte, dass alle Programme richtig aufgenommen und gesendet wurden. Das Studio von Radio Riesbach befand sich im ersten Stock des Gemeinschaftszentrums, auf dem Dach stand die Antenne.",
-            "Getragen wurde das Quartierradio von einem Verein, der im Lauf der Jahre zwischen 140 und 180 Mitglieder hatte. Die 30 Franken, die jedes Mitglied pro Jahr bezahlte, waren eine wichtige Einnahmequelle. Denn Radio Riesbach war komplett werbefrei. Dazu kamen Spenden, Gönnerbeiträge und Erlöse aus Flohmärkten und Festen. Aber die Finanzen waren immer knapp, denn das Radio musste neben Betriebs- und Materialkosten auch noch Gebühren für die Nutzung der Sendefrequenz und fürs Ausstrahlen von Musik bezahlen.",
-            "Radio Riesbach wollte ein Hörer:innenradio sein, aus dem Quartier, von und für das Quartier. Die Redaktionsgruppe wollte die Quartierbewohner:innen dazu animieren, mit ihrer Hilfe selber Sendungen zu gestalten. Im Laufe der Jahre probierten sie dazu verschiedene Formate aus. Radio Riesbach strahlte Interviews und Gruppengespräche aus, nahm Töne von Spaziergängen auf, sprach mit Anwohner:innen über ihre Kindheit im Quartier und befragte sie zu aktuellen Themen auf der Strasse. Manchmal wurde auch direkt ausserhalb des Studios gesendet, von einer Wiese, vom Seeufer oder, in mehrstündigen Live-Sendungen, von der «Schweizerischen Radio- und Fernsehausstellung» aus dem Zürcher Kongresshaus.",
+            "Getragen wurde das Quartierradio von einem Verein, der im Lauf der Jahre zwischen 140 und 180 Mitglieder hatte. Die 30 Franken, die jedes Mitglied pro Jahr bezahlte, waren eine wichtige Einnahmequelle. Denn Radio Riesbach war komplett werbefrei. Dazu kamen Spenden, Gönnerbeiträge und Erlöse aus Flohmärkten und Festen. Aber die Finanzen waren eher knapp, denn das Radio musste neben Betriebs- und Materialkosten auch noch Gebühren für die Nutzung der Sendefrequenz und fürs Ausstrahlen von Musik bezahlen.",
+            "Radio Riesbach wollte ein Hörer:innenradio sein, aus dem Quartier, von und für das Quartier. Die Redaktionsgruppe wollte die Quartierbewohner:innen dazu animieren, mit ihrer Hilfe selber Sendungen zu gestalten. Im Laufe der Jahre probierten sie dazu verschiedene Formate aus. Radio Riesbach strahlte Interviews und Gruppengespräche aus, nahm Töne von Spaziergängen auf, sprach mit Anwohner:innen über ihre Kindheit im Quartier und befragte sie zu aktuellen Themen auf der Strasse. Manchmal wurde auch von ausserhalb des Studios gesendet, von einer Wiese, vom Seeufer oder, in mehrstündigen Live-Sendungen, von der «Schweizerischen Radio- und Fernsehausstellung» aus dem Zürcher Kongresshaus.",
             "Die Macher:innen träumten davon, das Modell von Radio Riesbach auch auf andere Quartiere in der Stadt auszudehnen. Dazu wollten sie ihre Frequenz an den Tagen, an denen Radio Riesbach nicht sendete, anderen Quartierradios ausleihen. Verwirklicht wurde das «Radio mobil»-Konzept leider nie. Und auch die gewünschte Beteiligung aus dem eigenen Quartier blieb kleiner als erhofft. Nachdem das Kernteam vergeblich nach neuen, engagierten Radiostimmen gesucht hatte, verkündete es im Frühjahr 1990, keine neue Sendeerlaubnis zu beantragen. Wenige Monate vor Sendeschluss wurde die gesamte Aufnahmeausrüstung gestohlen, aber die Radiomacher:innen liessen sich nicht entmutigen.",
             "Nach 709 Sendungen verabschiedete sich das Radio-Riesbach-Team Ende März 1991 mit einem grossen Abschlussfest im GZ aus dem Äther. Glücklicherweise wurden alle Sendungen aufgenommen und ein Teil davon ist erhalten geblieben. So können wir heute reinhören, wie sich dieses einzigartige Radioprojekt und die bewegten 1980er-Jahre im Quartier angehört haben.",
           ],
@@ -192,14 +206,14 @@ const homeSections = computed(() => [
             "This is how the station's programming made its way from the studio at the GZ to homes in Riesbach.",
             "Radio Riesbach's goal was to be a listener-focused station. That's why the radio producers repeatedly introduced their audience to the inner workings of their field: what the studio looked like, where the antenna was located, who the people behind the sound boards were, and the technical terms they used to communicate with one another.",
             "Radio Riesbach was broadcast via ultra-shortwave (FM). In the second half of the 20th century, FM became the most important and widely used transmission medium for radio broadcasting in Switzerland. Compared to long, medium, and short waves, which had been used for radio broadcasting earlier, FM's reach is significantly smaller. However, the quality is generally better because the waves are less prone to interference. The number of available frequencies is limited, meaning that anyone wishing to broadcast via FM must apply to the government for a frequency license. This is exactly what Radio Riesbach did, and it was granted a so-called Konzession.",
-            "The transmission capacity of the Radio Riesbach antenna was strictly regulated and limited to the area between Tiefenbrunnen, the lakefront, Bellevue, and Klusplatz. A complaint filed by the Swiss Post, Telephone, and Telegraph Administration (PTT; the state-owned company was responsible for broadcasting infrastructure at the time) shows that compliance with the regulations was monitored. However, the radio producers recall that Radio Riesbach could also be tuned in to on the other side of the lake.",
+            "The transmission capacity of the Radio Riesbach antenna was regulated and limited to the area between Tiefenbrunnen, the lakefront, Bellevue, and Klusplatz. A complaint filed by the Swiss Post, Telephone, and Telegraph Administration (PTT; the state-owned company was responsible for broadcasting infrastructure at the time) shows that compliance with the regulations was monitored. However, the radio producers recall that Radio Riesbach could also be tuned in to on the other side of the lake.",
             'Anyone with an older radio can still receive FM broadcasts today by tuning to the "FM" setting. For years, there has been discussion about ending FM operations in Switzerland and switching entirely to digital radio and internet radio. However, the originally planned end of FM service for late 2026 was recently postponed to 2031.',
           ]
         : [
             "So gelangte das Programm aus dem Studio im GZ in die Riesbacher Haushalte.",
-            "Radio Riesbach wollte ein Hörer:innen-Radio zu sein. Deshalb zeigten die Radiomacher:innen ihrem Publikum immer wieder, wie ihr Handwerk funktionierte: Wie es im Studio aussah, wo die Antenne stand, wer die Menschen hinter den Mischpulten waren und mit welchen Fachbegriffen sie sich verständigten.",
+            "Radio Riesbach wollte ein Hörer:innen-Radio sein. Deshalb zeigten die Radiomacher:innen ihrem Publikum immer wieder, wie ihr Handwerk funktionierte: Wie es im Studio aussah, wo die Antenne stand, wer die Menschen hinter den Mischpulten waren und mit welchen Fachbegriffen sie sich verständigten.",
             "Gesendet wurde Radio Riesbach über Ultrakurzwelle (UKW). UKW entwickelte sich in der zweiten Hälfte des 20. Jahrhunderts zum wichtigsten und meist genutzten Verbreitungsweg für Radio in der Schweiz. Im Vergleich zu Lang-, Mittel- und Kurzwellen, über die schon früher Radio gesendet wurde, ist die Reichweite von UKW zwar deutlich geringer. Dafür ist die Qualität in der Regel besser, weil die Wellen weniger störungsanfällig sind. Die Zahl der verfügbaren Frequenzen ist begrenzt. Wer über UKW senden möchte, muss beim Staat die Nutzung einer Frequenz beantragen. Genau das tat auch Radio Riesbach und erhielt eine sogenannte Konzession.",
-            "Die Sendeleistung der Radio-Riesbach-Antenne war streng reguliert und auf das Gebiet zwischen Tiefenbrunnen, Seeufer, Bellevue und Klusplatz beschränkt. Die Beschwerde der schweizerischen Post-, Telefon- und Telegrafenbetriebe (PTT; das staatliche Unternehmen war in dieser Zeit unter anderem für die Sendeinfrastruktur zuständig) zeigt, dass das Einhalten der Vorgaben kontrolliert wurde. Die Radiomacher:innen erinnern sich aber daran, dass Radio Riesbach auch auf der anderen Seeseite empfangen werden konnte.",
+            "Die Sendeleistung der Radio-Riesbach-Antenne war reguliert und auf das Gebiet zwischen Tiefenbrunnen, Seeufer, Bellevue und Klusplatz beschränkt. Die Beschwerde der schweizerischen Post-, Telefon- und Telegrafenbetriebe (PTT; das staatliche Unternehmen war in dieser Zeit unter anderem für die Sendeinfrastruktur zuständig) zeigt, dass das Einhalten der Vorgaben kontrolliert wurde. Die Radiomacher:innen erinnern sich aber daran, dass Radio Riesbach auch auf der anderen Seeseite empfangen werden konnte.",
             "Wer ein älteres Radiogerät besitzt, kann auch heute noch UKW-Sendungen über die Einstellung «FM» empfangen. Seit Jahren wird darüber diskutiert, den UKW-Betrieb in der Schweiz zu beenden und ganz auf digitales Radio und Internetradio zu setzen. Das eigentlich beschlossene UKW-Aus für Ende 2026 wurde jüngst allerdings auf 2031 verschoben.",
           ],
   },
@@ -271,20 +285,10 @@ const audioHeading = computed(() =>
 const audioBody = computed(() =>
   locale.value === "en"
     ? "Get an idea of what Radio Riesbach and the neighborhood sounded like in the 1980s. Here you’ll find a selection of short audio clips that were broadcast between 1984 and 1991 – via a link below you can get to the archived version of the program and listen it in full length."
-    : "Verschaffen Sie sich einen Eindruck davon, wie sich Radio Riesbach und die 1980er Jahre im Quartier anhörten. Hier finden Sie eine Auswahl an Stimmen, die zwischen 1984 und 1991 gesendet wurden – über den Link unterhalb jeder Aufzeichnung gelangen Sie zur dazugehörigen Sendung und können diese in voller Länge nachhören.",
+    : "Verschaffen Sie sich einen Eindruck davon, wie sich Radio Riesbach und die 1980er-Jahre im Quartier anhörten. Hier finden Sie eine Auswahl an Stimmen, die zwischen 1984 und 1991 gesendet wurden – über den Link unterhalb jeder Aufzeichnung gelangen Sie zur dazugehörigen Sendung und können diese in voller Länge nachhören.",
 );
 
-const introParagraphs = computed(() => {
-  return locale.value === "en"
-    ? [
-        "Welcome to Radio Riesbach! This was Switzerland’s first neighborhood radio station, broadcasting from 1984 to 1991 from the first floor of the Gemeinschaftszentrum Riesbach in Zurich.",
-        "We’d like to give you a glimpse into this unique neighborhood station and shed some light on the era in which it emerged and the people who shaped it. About a third of the 709 programs produced by Radio Riesbach have been preserved to this day.",
-        "The links on this page take you directly to excerpts from selected programs. This will give you a sense of what the radio station and the neighborhood sounded like in the 1980s. You’ll also find a link to the Sozialarchiv Zürich website, where the entire preserved program archive is available.",
-      ]
-    : [
-        "Herzlich willkommen bei Radio Riesbach! Das war das erste Quartierradio der Schweiz und es sendete zwischen 1984 und 1991 aus dem ersten Stock des Gemeinschaftszentrums Riesbach in Zürich.",
-        "Wir möchten Ihnen einen Einblick in diesen besonderen Quartiersender geben und zeigen, in welcher Zeit er entstand und welche Menschen ihn prägten. Etwa ein Drittel der insgesamt 709 Radio Riesbach produzierten Sendungen sind bis heute erhalten geblieben.",
-        "Über die Links auf dieser Seite gelangen Sie direkt zu Ausschnitten aus ausgewählten Beiträgen. So erhalten Sie einen Eindruck, wie sich das Radio und auch das Quartier in den 1980er-Jahren anhörte. Dazu finden Sie immer auch den Link zur Seite des Sozialarchivs, wo das gesamte erhaltene Sendungearchiv zugänglich sind.",
-      ];
-});
+const introParagraphs = computed(() =>
+  (tm("home.introParagraphs") as unknown[]).map((paragraph) => rt(paragraph)),
+);
 </script>
