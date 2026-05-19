@@ -29,16 +29,18 @@
         <h3 class="font-bold text-base mt-0.5 leading-snug">{{ clip.title }}</h3>
         <div v-if="localizedDescription" class="mt-1">
           <p
+            ref="descriptionEl"
             class="text-sm text-black-coffee/70 leading-relaxed overflow-hidden transition-all duration-300"
             :class="isExpanded ? '' : 'line-clamp-3'"
           >
             {{ localizedDescription }}
           </p>
           <button
+            v-if="descriptionCanExpand"
             class="text-xs text-riesbach-rot mt-1 hover:underline"
             @click="$emit('toggle-expand')"
           >
-            {{ isExpanded ? `▲ ${$t('audio.less')}` : `▼ ${$t('audio.more')}` }}
+            {{ isExpanded ? `- ${$t('audio.less')}` : `+ ${$t('audio.more')}` }}
           </button>
         </div>
       </div>
@@ -96,9 +98,11 @@ const emit = defineEmits<{ close: []; 'toggle-expand': []; 'play-state': [boolea
 const { locale } = useI18n()
 
 const audioEl = ref<HTMLAudioElement | null>(null)
+const descriptionEl = ref<HTMLElement | null>(null)
 const isPlaying = ref(false)
 const progress = ref(0)
 const currentTime = ref(0)
+const descriptionCanExpand = ref(false)
 const localizedDescription = computed(() =>
   locale.value === 'en' ? props.clip.descriptionEn || props.clip.description : props.clip.description
 )
@@ -115,6 +119,30 @@ const formattedTime = computed(() => {
   const m = Math.floor(t / 60)
   const s = Math.floor(t % 60)
   return `${m}:${s.toString().padStart(2, '0')}`
+})
+
+async function measureDescriptionOverflow() {
+  await nextTick()
+  const el = descriptionEl.value
+  if (!el) {
+    descriptionCanExpand.value = false
+    return
+  }
+
+  const lineHeight = parseFloat(window.getComputedStyle(el).lineHeight)
+  const collapsedHeight = lineHeight * 3
+  descriptionCanExpand.value = el.scrollHeight > collapsedHeight + 2
+}
+
+watch(localizedDescription, measureDescriptionOverflow)
+
+onMounted(() => {
+  measureDescriptionOverflow()
+  window.addEventListener('resize', measureDescriptionOverflow)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', measureDescriptionOverflow)
 })
 
 function togglePlay() {
