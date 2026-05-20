@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-black-coffee px-6 py-12 text-warm-white md:px-12 md:py-14">
+  <footer class="relative z-40 bg-black-coffee px-6 py-12 text-warm-white md:px-12 md:py-14">
     <div class="grid gap-12 md:grid-cols-[0.9fr_1.3fr_1.4fr] md:gap-10 lg:gap-16">
       <div class="space-y-6">
         <img src="/images/logo-white.png" alt="Radio Riesbach" class="h-32 w-auto opacity-90" />
