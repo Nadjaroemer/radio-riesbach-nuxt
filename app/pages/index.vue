@@ -333,7 +333,7 @@ const farewellBody = computed(() =>
 );
 
 const contentsLabel = computed(() =>
-  locale.value === "en" ? "Contents" : "Inhalte",
+  locale.value === "en" ? "Overview" : "Übersicht",
 );
 
 const sectionLorem = computed(
