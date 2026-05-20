@@ -2,27 +2,65 @@
   <main>
     <TheHero src="/images/hero.png" :alt="$t('hero.subtitle')" />
 
-    <aside
-      class="sticky top-[4.5rem] z-30 border-y border-black-coffee/15 bg-warm-white px-6 py-4 lg:hidden"
+    <div
+      ref="mobileContentsAnchor"
+      class=""
+      :style="mobileContentsPinned ? { height: `${mobileContentsHeight}px` } : undefined"
     >
-      <details class="group">
-        <summary
-          class="headline-strip headline-strip--section inline-flex cursor-pointer list-none items-center gap-3"
+      <aside
+        ref="mobileContentsEl"
+        class="border-y border-black-coffee/15 bg-warm-white px-6 py-4 lg:hidden"
+        :class="mobileContentsPinned ? 'fixed left-0 right-0 z-40' : 'relative z-30'"
+        :style="mobileContentsPinned ? { top: 'var(--nav-height, 4.5rem)' } : undefined"
+      >
+        <details class="group" @toggle="updateMobileContentsState">
+          <summary
+            class="headline-strip headline-strip--section inline-flex cursor-pointer list-none items-center gap-3"
+          >
+            <span>{{ contentsLabel }}</span>
+            <span
+              aria-hidden="true"
+              class="text-sm leading-none group-open:hidden"
+              >+</span
+            >
+            <span
+              aria-hidden="true"
+              class="hidden text-sm leading-none group-open:inline"
+              >-</span
+            >
+          </summary>
+          <nav aria-label="Contents" class="mt-5">
+            <ul class="space-y-3 text-sm leading-relaxed">
+              <li v-for="section in homeSections" :key="section.id">
+                <a
+                  :href="`#${section.id}`"
+                  class="!text-black-coffee underline decoration-black-coffee underline-offset-2 transition-colors hover:!text-riesbach-rot hover:decoration-riesbach-rot"
+                >
+                  {{ section.label }}
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </details>
+      </aside>
+    </div>
+
+    <aside
+      v-show="desktopContentsVisible"
+      class="fixed z-30 hidden w-64 lg:block"
+      :style="{
+        top: 'calc(var(--nav-height, 4.5rem) + 4.75rem)',
+        right: 'max(3rem, calc((100vw - 80rem) / 2))'
+      }"
+    >
+      <div class="space-y-5">
+        <h2
+          class="headline-strip headline-strip--section block w-fit ml-auto"
         >
-          <span>{{ contentsLabel }}</span>
-          <span
-            aria-hidden="true"
-            class="text-sm leading-none group-open:hidden"
-            >+</span
-          >
-          <span
-            aria-hidden="true"
-            class="hidden text-sm leading-none group-open:inline"
-            >-</span
-          >
-        </summary>
-        <nav aria-label="Contents" class="mt-5">
-          <ul class="space-y-3 text-sm leading-relaxed">
+          {{ contentsLabel }}
+        </h2>
+        <nav aria-label="Contents">
+          <ul class="space-y-3 text-right text-sm leading-relaxed">
             <li v-for="section in homeSections" :key="section.id">
               <a
                 :href="`#${section.id}`"
@@ -33,7 +71,7 @@
             </li>
           </ul>
         </nav>
-      </details>
+      </div>
     </aside>
 
     <section id="begruessung" class="px-6 py-20 md:px-12">
@@ -50,27 +88,7 @@
           </p>
         </div>
 
-        <aside class="hidden lg:block">
-          <div class="space-y-5 lg:sticky lg:top-32">
-            <h2
-              class="headline-strip headline-strip--section block w-fit ml-auto"
-            >
-              {{ contentsLabel }}
-            </h2>
-            <nav aria-label="Contents">
-              <ul class="space-y-3 text-right text-sm leading-relaxed">
-                <li v-for="section in homeSections" :key="section.id">
-                  <a
-                    :href="`#${section.id}`"
-                    class="!text-black-coffee underline decoration-black-coffee underline-offset-2 transition-colors hover:!text-riesbach-rot hover:decoration-riesbach-rot"
-                  >
-                    {{ section.label }}
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </aside>
+        <div class="hidden lg:block" />
       </div>
     </section>
 
@@ -103,18 +121,23 @@
     </section>
 
     <section id="reinhoeren" class="px-6 py-12 overflow-hidden md:px-12">
-      <div class="mx-auto max-w-7xl">
-        <h2 class="headline-strip headline-strip--subsection mb-8">
-          {{ audioHeading }}
-        </h2>
-        <div class="space-y-8">
-          <p
-            class="max-w-4xl text-[16px] leading-[1.75] tracking-[0.01em] text-black-coffee"
-          >
-            {{ audioBody }}
-          </p>
-          <AudioSlider :clips="audioClips" />
+      <div
+        class="mx-auto max-w-7xl lg:grid lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16"
+      >
+        <div class="min-w-0">
+          <h2 class="headline-strip headline-strip--subsection mb-8">
+            {{ audioHeading }}
+          </h2>
+          <div class="space-y-8">
+            <p
+              class="max-w-4xl text-[16px] leading-[1.75] tracking-[0.01em] text-black-coffee"
+            >
+              {{ audioBody }}
+            </p>
+            <AudioSlider :clips="audioClips" />
+          </div>
         </div>
+        <div class="hidden lg:block" />
       </div>
     </section>
 
@@ -137,8 +160,10 @@
     </section>
 
     <section id="abschiedssendung-video" class="px-6 md:px-12 pb-16">
-      <div class="mx-auto max-w-7xl">
-        <div>
+      <div
+        class="mx-auto max-w-7xl lg:grid lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16"
+      >
+        <div class="max-w-4xl">
           <div class="overflow-hidden bg-black-coffee/10">
             <video
               controls
@@ -151,6 +176,7 @@
             </video>
           </div>
         </div>
+        <div class="hidden lg:block" />
       </div>
     </section>
   </main>
@@ -161,6 +187,43 @@ const { locale, tm, rt } = useI18n();
 import { audioClips } from "~/data/audioClips";
 
 const videoSrc = "/video/radio_riesbach_compressed.mp4";
+const mobileContentsAnchor = ref<HTMLElement | null>(null);
+const mobileContentsEl = ref<HTMLElement | null>(null);
+const mobileContentsPinned = ref(false);
+const mobileContentsHeight = ref(0);
+const desktopContentsVisible = ref(false);
+
+function getNavHeight() {
+  const navHeight = window
+    .getComputedStyle(document.documentElement)
+    .getPropertyValue("--nav-height");
+
+  return Number.parseFloat(navHeight) || 72;
+}
+
+async function updateMobileContentsState() {
+  await nextTick();
+
+  const anchor = mobileContentsAnchor.value;
+  const menu = mobileContentsEl.value;
+  if (!anchor || !menu) return;
+
+  mobileContentsHeight.value = menu.offsetHeight;
+  const hasReachedNav = anchor.getBoundingClientRect().top <= getNavHeight();
+  mobileContentsPinned.value = hasReachedNav;
+  desktopContentsVisible.value = hasReachedNav;
+}
+
+onMounted(() => {
+  updateMobileContentsState();
+  window.addEventListener("scroll", updateMobileContentsState, { passive: true });
+  window.addEventListener("resize", updateMobileContentsState, { passive: true });
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", updateMobileContentsState);
+  window.removeEventListener("resize", updateMobileContentsState);
+});
 
 const homeSections = computed(() => [
   {

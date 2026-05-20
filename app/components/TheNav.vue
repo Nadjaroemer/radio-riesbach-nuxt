@@ -1,6 +1,7 @@
 <template>
   <div>
     <nav
+      ref="navEl"
       class="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
       :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'"
     >
@@ -91,9 +92,15 @@ const route = useRoute()
 
 const scrolled = ref(false)
 const mobileMenuOpen = ref(false)
+const navEl = ref<HTMLElement | null>(null)
 const homePath = computed(() => localePath('/'))
 const alwaysVisible = computed(() => route.path !== homePath.value)
 const visible = computed(() => alwaysVisible.value || scrolled.value)
+
+function updateNavHeight() {
+  if (!navEl.value) return
+  document.documentElement.style.setProperty('--nav-height', `${navEl.value.offsetHeight}px`)
+}
 
 function onScroll() {
   scrolled.value = window.scrollY > 80
@@ -110,12 +117,15 @@ function setLocaleAndClose(code: 'de' | 'en') {
 
 onMounted(() => {
   onScroll()
+  updateNavHeight()
   window.addEventListener('scroll', onScroll, { passive: true })
+  window.addEventListener('resize', updateNavHeight, { passive: true })
 })
 
 watch(() => route.path, closeMenu)
 
 onUnmounted(() => {
   window.removeEventListener('scroll', onScroll)
+  window.removeEventListener('resize', updateNavHeight)
 })
 </script>
