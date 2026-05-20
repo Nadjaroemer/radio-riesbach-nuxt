@@ -45,34 +45,43 @@
       </aside>
     </div>
 
-    <aside
-      v-show="desktopContentsVisible"
-      class="fixed z-30 hidden w-64 lg:block"
-      :style="{
-        top: 'calc(var(--nav-height, 4.5rem) + 4.75rem)',
-        right: 'max(3rem, calc((100vw - 80rem) / 2))'
-      }"
+    <Transition
+      enter-active-class="transition duration-300 ease-out"
+      enter-from-class="opacity-0 translate-y-3"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition duration-200 ease-in"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 translate-y-3"
     >
-      <div class="space-y-5">
-        <h2
-          class="headline-strip headline-strip--section block w-fit ml-auto"
-        >
-          {{ contentsLabel }}
-        </h2>
-        <nav aria-label="Contents">
-          <ul class="space-y-3 text-right text-sm leading-relaxed">
-            <li v-for="section in homeSections" :key="section.id">
-              <a
-                :href="`#${section.id}`"
-                class="!text-black-coffee underline decoration-black-coffee underline-offset-2 transition-colors hover:!text-riesbach-rot hover:decoration-riesbach-rot"
-              >
-                {{ section.label }}
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </aside>
+      <aside
+        v-if="desktopContentsVisible"
+        class="fixed z-30 hidden w-64 lg:block"
+        :style="{
+          top: 'calc(var(--nav-height, 4.5rem) + 4.75rem)',
+          right: 'max(3rem, calc((100vw - 80rem) / 2))'
+        }"
+      >
+        <div class="space-y-5">
+          <h2
+            class="headline-strip headline-strip--section block w-fit ml-auto"
+          >
+            {{ contentsLabel }}
+          </h2>
+          <nav aria-label="Contents">
+            <ul class="space-y-3 text-right text-sm leading-relaxed">
+              <li v-for="section in homeSections" :key="section.id">
+                <a
+                  :href="`#${section.id}`"
+                  class="!text-black-coffee underline decoration-black-coffee underline-offset-2 transition-colors hover:!text-riesbach-rot hover:decoration-riesbach-rot"
+                >
+                  {{ section.label }}
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+    </Transition>
 
     <section id="begruessung" class="px-6 py-20 md:px-12">
       <div
@@ -210,8 +219,13 @@ async function updateMobileContentsState() {
 
   mobileContentsHeight.value = menu.offsetHeight;
   const hasReachedNav = anchor.getBoundingClientRect().top <= getNavHeight();
+  const footer = document.querySelector('footer');
+  const footerIsNear = footer
+    ? footer.getBoundingClientRect().top <= window.innerHeight - 32
+    : false;
+
   mobileContentsPinned.value = hasReachedNav;
-  desktopContentsVisible.value = hasReachedNav;
+  desktopContentsVisible.value = hasReachedNav && !footerIsNear;
 }
 
 onMounted(() => {
