@@ -163,7 +163,8 @@ export const audioClips: AudioClip[] = [
       "A local council member's expectations for the new community radio station, a look back at the very first broadcast on April 1, 1984. Date: October 21, 1984.",
     image: "/images/placeholder_audioplayer_radio.png",
     src: "/audio/RR_Interview 1.4.1984_kurz.mp3",
-    originalUrl: "",
+    originalUrl:
+      "https://www.bild-video-ton.ch/bestand/objekt/Sozarch_F_1030-015A",
   },
   {
     id: "04",
@@ -175,7 +176,8 @@ export const audioClips: AudioClip[] = [
       "In the very last episode, Liz Mennel looks back on the early days of Radio Riesbach. Date: March 24, 1991.",
     image: "/images/placeholder_audioplayer_radio.png",
     src: "/audio/RR_Finissage_Liz_kurz.mp3",
-    originalUrl: "#",
+    originalUrl:
+      "https://www.bild-video-ton.ch/bestand/objekt/Sozarch_F_1030-139A",
   },
   {
     id: "08",
@@ -185,7 +187,8 @@ export const audioClips: AudioClip[] = [
     descriptionEn: "Quartierjournal written by Stefan Schmid. Date: October 21, 1984.",
     image: "/images/placeholder_audioplayer_radio.png",
     src: "/audio/RR_50. Sendung_Quartierjournal.mp3",
-    originalUrl: "#",
+    originalUrl:
+      "https://www.bild-video-ton.ch/bestand/objekt/Sozarch_F_1030-015A",
   },
   {
     id: "12",
@@ -197,7 +200,8 @@ export const audioClips: AudioClip[] = [
       "The Radio Riesbach jingle, which was played at the beginning of every broadcast. Composed by Benjamin Fehr.",
     image: "/images/placeholder_audioplayer_radio.png",
     src: "/audio/RR_Signet.mp3",
-    originalUrl: "#",
+    originalUrl:
+      "https://www.bild-video-ton.ch/bestand/objekt/Sozarch_F_1030-156",
   },
   {
     id: "13",
@@ -209,6 +213,7 @@ export const audioClips: AudioClip[] = [
       "In the very last episode, Peter Detsch explains how the original license application came about. Date: March 24, 1991.",
     image: "/images/placeholder_audioplayer_radio.png",
     src: "/audio/RR_Finissage_Peter_kurz.mp3",
-    originalUrl: "#",
+    originalUrl:
+      "https://www.bild-video-ton.ch/bestand/objekt/Sozarch_F_1030-139B",
   },
 ];
