@@ -14,18 +14,20 @@
     <div class="absolute inset-0 bg-black/20" />
 
     <div
-      class="absolute bottom-6 left-4 flex max-w-[calc(100%-2rem)] items-end gap-4 sm:bottom-8 sm:left-8 sm:gap-6 md:bottom-12 md:left-12"
+      class="absolute bottom-4 left-4 flex max-w-[calc(100%-2rem)] items-end gap-2 sm:bottom-8 sm:left-8 sm:gap-6 md:bottom-12 md:left-12"
     >
       <img
         src="/images/logo-white.png"
         alt="Radio Riesbach"
         class="hero-logo-motion w-[min(36vw,15.5rem)] min-w-24 shrink-0 sm:w-[min(42vw,15.5rem)] sm:min-w-32"
       />
-      <p
-        class="mb-3 bg-black-coffee px-2.5 py-1.5 text-[9px] leading-none tracking-[0.02em] text-warm-white shadow-[0_1px_0_rgba(255,255,255,0.18)] sm:mb-5 sm:px-4 sm:py-2 sm:text-sm md:mb-6 md:px-5 md:py-2.5 md:text-base"
+      <div
+        class="mb-2 flex flex-col items-start gap-1.5 sm:mb-5 md:mb-6"
       >
-        Das erste Quartierradio der Schweiz
-      </p>
+        <p class="whitespace-nowrap bg-black-coffee px-2.5 py-1.5 text-[13px] leading-none tracking-[0.02em] text-warm-white shadow-[0_1px_0_rgba(255,255,255,0.18)] sm:px-4 sm:py-2 sm:text-sm md:px-5 md:py-2.5 md:text-base">
+          {{ $t('hero.title') }}
+        </p>
+      </div>
     </div>
   </section>
 </template>
